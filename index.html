@@ -1,1169 +1,662 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- Primary Meta Tags -->
-  <title>Muthukumar Pattan | Senior Quality Engineer, SDET & AI Innovator</title>
-  <meta name="title" content="Muthukumar Pattan | Senior Quality Engineer, SDET & AI Innovator" />
-  <meta name="description" content="Portfolio of Muthukumar Pattan: Senior Quality Engineering & SDET Professional at Freshworks, Open Source Contributor (SeleniumHQ), AI Agent Builder, and Topmate Career Mentor." />
+  <title>Muthukumar Pattan | Lead SDET at Freshworks &middot; Enterprise Quality Architect</title>
+  <meta name="description" content="Official portfolio of Muthukumar Pattan, Lead SDET at Freshworks. Specializing in Banking, Health Insurance (UnitedHealth Group), SaaS Test Automation, SeleniumHQ Open Source, and 1:1 Mentorship." />
   <meta name="author" content="Muthukumar Pattan" />
   
-  <!-- Open Graph / Facebook / LinkedIn -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bckupmuthu.github.io/" />
-  <meta property="og:title" content="Muthukumar Pattan | Senior Quality Engineer & SDET" />
-  <meta property="og:description" content="A results-driven Technology and Test Automation Professional with proven expertise in Quality Engineering, Selenium, Autonomous AI Agents, and 1:1 Mentorship." />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/69098183?v=4" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Muthukumar Pattan | Lead SDET at Freshworks" />
+  <meta property="og:description" content="Lead SDET at Freshworks with deep enterprise domain expertise in Banking, Health Insurance (UnitedHealth Group), Selenium open-source engineering, and AI Agents." />
+  <meta property="og:image" content="assets/images/profile.jpg" />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:title" content="Muthukumar Pattan | Portfolio" />
-  <meta property="twitter:description" content="Senior SDET at Freshworks, Selenium contributor, AI Agent Developer, and Topmate Coach." />
-  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/69098183?v=4" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💾</text></svg>">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-
-  <!-- Tailwind CSS & Lucide Icons CDN -->
+  <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#eef2ff',
-              100: '#e0e7ff',
-              200: '#c7d2fe',
-              300: '#a5b4fc',
-              400: '#818cf8',
-              500: '#6366f1',
-              600: '#4f46e5',
-              700: '#4338ca',
-              800: '#3730a3',
-              900: '#312e81',
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom Stylesheet -->
+  <!-- 90s Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="bg-slate-50 text-slate-800 dark:bg-[#090d16] dark:text-slate-100 min-h-screen transition-colors duration-300 font-sans selection:bg-indigo-500 selection:text-white">
+<body>
 
-  <!-- Top Announcement Bar / Mentorship Banner -->
-  <div class="bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-950 text-white text-xs py-2 px-4 text-center font-medium relative z-50 border-b border-indigo-800/40">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
-      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-semibold">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Open for Mentorship
-      </span>
-      <span>Looking to transition from QA to SDET or scale your test automation framework?</span>
-      <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer" class="underline hover:text-indigo-200 inline-flex items-center gap-1 font-semibold transition-colors">
-        Book a 1:1 on Topmate <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-      </a>
+  <!-- Top 90s Marquee Ticker -->
+  <div class="win-marquee flex items-center justify-between border-b border-black">
+    <div class="flex items-center gap-2 overflow-hidden">
+      <span>💾 <strong>SYSTEM ANNOUNCEMENT:</strong> Welcome to the Official Workstation of Muthukumar Pattan &middot; Lead SDET at Freshworks &middot; Enterprise Quality &amp; Test Architecture Specialist &middot; Domains: Banking (BFSI), Health Insurance (UnitedHealth Group), SaaS &middot; Mentorship open on Topmate</span>
+    </div>
+    <div class="hidden sm:flex items-center gap-3 pl-4 flex-shrink-0 text-[11px]">
+      <span>STATUS: <strong>ONLINE</strong> [PORT: 8080]</span>
     </div>
   </div>
 
-  <!-- Sticky Glassmorphic Navbar -->
-  <header class="sticky top-0 z-40 w-full glass border-b border-slate-200/80 dark:border-slate-800/80 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      
-      <!-- Brand Logo -->
-      <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 flex items-center justify-center text-white font-extrabold text-base shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-200">
-          MP
-        </div>
-        <div class="flex flex-col">
-          <span class="font-bold text-slate-900 dark:text-white tracking-tight leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-            Muthukumar Pattan
-          </span>
-          <span class="text-[11px] text-slate-500 dark:text-slate-400 font-mono">
-            Freshworks &middot; SDET &middot; AI Agent
-          </span>
-        </div>
-      </a>
+  <!-- Main Desktop Container -->
+  <div class="max-w-6xl mx-auto px-2 sm:px-4 py-4 space-y-5">
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium">
-        <a href="#about" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all">About</a>
-        <a href="#experience" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all">Experience</a>
-        <a href="#skills" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all">Skills</a>
-        <a href="#projects" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all">Projects</a>
-        <a href="#mentorship" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all">Mentorship</a>
-        <a href="#insights" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all">Insights</a>
-        <a href="#contact" class="nav-link px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-all">Contact</a>
-      </nav>
+    <!-- TOP NAVIGATION & SHORTCUT TOOLBAR (90s Style) -->
+    <header class="win-raised p-2 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-sm tracking-wide text-[#000080] flex items-center gap-1.5">
+          <i data-lucide="monitor" class="w-4 h-4 text-[#000080]"></i>
+          MUTHUKUMAR_PATTAN.EXE
+        </span>
+        <span class="text-xs text-gray-600 hidden sm:inline">| Lead SDET @ Freshworks</span>
+      </div>
 
-      <!-- Right Action Controls -->
-      <div class="flex items-center gap-2 sm:gap-3">
+      <!-- Quick Action Buttons -->
+      <div class="flex flex-wrap items-center gap-2">
         <!-- Topmate Button -->
-        <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer" 
-           class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 shadow-sm shadow-indigo-600/30 hover:shadow-indigo-600/50 transition-all transform hover:-translate-y-0.5">
+        <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer" class="win-btn win-btn-topmate text-xs">
           <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-          <span>Topmate 1:1</span>
+          <span>Topmate 1:1 Mentorship</span>
         </a>
 
-        <!-- Dark / Light Theme Toggle -->
-        <button id="theme-toggle" type="button" aria-label="Toggle theme" 
-                class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
-          <i data-lucide="sun" class="w-4 h-4 theme-icon-light hidden"></i>
-          <i data-lucide="moon" class="w-4 h-4 theme-icon-dark"></i>
-        </button>
+        <!-- Official LinkedIn Button with authentic color #0A66C2 -->
+        <a href="https://www.linkedin.com/in/muthukumar-pattan-a0b8079a/" target="_blank" rel="noopener noreferrer" class="win-btn win-btn-linkedin text-xs">
+          <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+          <span>LinkedIn Profile</span>
+        </a>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" 
-                class="md:hidden w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
-          <i data-lucide="menu" class="w-5 h-5"></i>
-        </button>
-      </div>
-
-    </div>
-
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden glass border-b border-slate-200 dark:border-slate-800 px-4 pt-3 pb-6 space-y-3">
-      <div class="flex flex-col space-y-1">
-        <a href="#about" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800/80">About</a>
-        <a href="#experience" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800/80">Experience</a>
-        <a href="#skills" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800/80">Skills</a>
-        <a href="#projects" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800/80">Projects & Open Source</a>
-        <a href="#mentorship" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800/80">Topmate Mentorship</a>
-        <a href="#insights" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800/80">Insights & Tech</a>
-        <a href="#contact" class="mobile-nav-link px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-indigo-50 dark:hover:bg-slate-800/80">Contact</a>
-      </div>
-      <div class="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex flex-col gap-2">
-        <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer" 
-           class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700">
-          <i data-lucide="calendar" class="w-4 h-4"></i> Book Session on Topmate
+        <!-- GitHub Button -->
+        <a href="https://github.com/BckupMuthu" target="_blank" rel="noopener noreferrer" class="win-btn text-xs">
+          <i data-lucide="github" class="w-3.5 h-3.5"></i>
+          <span>GitHub (BckupMuthu)</span>
         </a>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden mesh-gradient-light dark:mesh-gradient-dark">
-    <!-- Subtle glow background circles -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-10 right-10 w-72 h-72 bg-cyan-500/10 dark:bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Hero Left Column: Info & Headline -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          
-          <!-- Status pill -->
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-200/80 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700 text-xs font-medium text-slate-800 dark:text-slate-200">
-            <span class="beacon-dot"></span>
-            <span>Senior SDET at <strong class="text-indigo-600 dark:text-indigo-400">Freshworks</strong> &middot; Chennai, India</span>
-          </div>
-
-          <!-- Main Headline -->
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
-            Engineering High-Quality <br class="hidden sm:inline" />
-            <span class="text-gradient">SaaS Test Automation</span> &amp; <br class="hidden sm:inline" />
-            Autonomous AI Agents
-          </h1>
-
-          <!-- Subtitle / Bio summary -->
-          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-            I'm <strong class="text-slate-900 dark:text-white">Muthukumar Pattan</strong>, a results-driven Technology and Test Automation Professional. 
-            I build resilient test infrastructures for hyper-scale platforms, contribute to open-source systems like <span class="font-semibold text-slate-900 dark:text-white">Selenium</span>, engineer autonomous AI agents, and empower engineers via 1:1 career coaching on <span class="font-semibold text-slate-900 dark:text-white">Topmate</span>.
-          </p>
-
-          <!-- Key Action Buttons -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
-            <!-- Topmate Primary CTA -->
-            <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer"
-               class="px-5 py-3 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 flex items-center gap-2 transition-all transform hover:-translate-y-0.5">
-              <i data-lucide="video" class="w-4 h-4"></i>
-              <span>Book 1:1 Mentorship</span>
-            </a>
-
-            <!-- GitHub Link -->
-            <a href="https://github.com/BckupMuthu" target="_blank" rel="noopener noreferrer"
-               class="px-5 py-3 rounded-xl text-sm font-semibold text-slate-800 dark:text-slate-200 bg-white/80 dark:bg-slate-800/80 hover:bg-white dark:hover:bg-slate-700/80 border border-slate-300 dark:border-slate-700 flex items-center gap-2 transition-all shadow-sm">
-              <i data-lucide="github" class="w-4 h-4"></i>
-              <span>GitHub (BckupMuthu)</span>
-            </a>
-
-            <!-- LinkedIn Profile -->
-            <a href="https://www.linkedin.com/in/muthukumar-pattan-a0b8079a/" target="_blank" rel="noopener noreferrer"
-               class="px-5 py-3 rounded-xl text-sm font-semibold text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/40 hover:bg-sky-100 dark:hover:bg-sky-900/50 border border-sky-200 dark:border-sky-800/50 flex items-center gap-2 transition-all">
-              <i data-lucide="linkedin" class="w-4 h-4"></i>
-              <span>LinkedIn</span>
-            </a>
-          </div>
-
-          <!-- Quick Skills Pills -->
-          <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-2">
-            <span class="tech-badge"><i data-lucide="check" class="w-3 h-3 text-indigo-500"></i> Selenium WebDriver</span>
-            <span class="tech-badge"><i data-lucide="check" class="w-3 h-3 text-indigo-500"></i> SDET Leadership</span>
-            <span class="tech-badge"><i data-lucide="check" class="w-3 h-3 text-indigo-500"></i> Autonomous AI Agents</span>
-            <span class="tech-badge"><i data-lucide="check" class="w-3 h-3 text-indigo-500"></i> Python &amp; Java</span>
-            <span class="tech-badge"><i data-lucide="check" class="w-3 h-3 text-indigo-500"></i> CI/CD Quality Gates</span>
-          </div>
-
+    <!-- WINDOW 1: PROFESSIONAL PROFILE & HERO WORKSTATION -->
+    <main class="win-raised-heavy">
+      
+      <!-- 90s Window Titlebar -->
+      <div class="win-titlebar">
+        <div class="win-titlebar-title">
+          <i data-lucide="user-check" class="w-4 h-4"></i>
+          <span>Profile_Viewer - [Muthukumar Pattan - Lead SDET at Freshworks]</span>
         </div>
+        <div class="flex items-center gap-1">
+          <button class="win-titlebar-btn" title="Minimize">_</button>
+          <button class="win-titlebar-btn" title="Maximize">□</button>
+          <button class="win-titlebar-btn" title="Close">✕</button>
+        </div>
+      </div>
 
-        <!-- Hero Right Column: Interactive Profile Card -->
-        <div class="lg:col-span-5 flex justify-center">
-          <div class="w-full max-w-md glass-card rounded-2xl p-6 shadow-2xl relative overflow-hidden border border-slate-200/80 dark:border-slate-700/60">
-            
-            <!-- Header bar with decorative window dots -->
-            <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-700/60 mb-5">
-              <div class="flex items-center gap-1.5">
-                <span class="w-3 h-3 rounded-full bg-rose-500"></span>
-                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
-                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
-              </div>
-              <span class="text-xs font-mono text-slate-500 dark:text-slate-400">freshworks.sdet.profile</span>
+      <!-- 90s Menubar -->
+      <div class="win-menubar">
+        <span class="win-menubar-item"><u>F</u>ile</span>
+        <span class="win-menubar-item"><u>E</u>dit</span>
+        <span class="win-menubar-item"><u>V</u>iew</span>
+        <span class="win-menubar-item"><u>D</u>omains</span>
+        <span class="win-menubar-item"><u>T</u>estFrameworks</span>
+        <span class="win-menubar-item"><u>H</u>elp</span>
+      </div>
+
+      <!-- Window Body -->
+      <div class="p-4 sm:p-6 space-y-6">
+        
+        <!-- Profile Header Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          
+          <!-- User Uploaded Profile Picture in 90s Inset Frame -->
+          <div class="md:col-span-4 flex flex-col items-center">
+            <div class="win-sunken p-2 bg-[#d4d0c8] inline-block">
+              <img src="assets/images/profile.jpg" alt="Muthukumar Pattan" 
+                   class="w-48 h-48 sm:w-56 sm:h-56 object-cover border border-black shadow-inner" />
+            </div>
+            <div class="mt-2 text-center">
+              <span class="retro-badge bg-[#000080] text-white">AUTHENTICATED USER</span>
+              <p class="text-xs text-gray-700 font-mono mt-1">Chennai, Tamil Nadu, India</p>
+            </div>
+          </div>
+
+          <!-- Hero Details & Headline -->
+          <div class="md:col-span-8 space-y-3">
+            <div class="inline-block px-2 py-0.5 bg-[#ffffcc] border border-black text-xs font-bold text-black">
+              ★ ENTERPRISE TEST LEAD &amp; ARCHITECT
             </div>
 
-            <!-- Avatar & Profile Details -->
-            <div class="flex items-center gap-4 mb-5">
-              <div class="relative">
-                <img src="https://avatars.githubusercontent.com/u/69098183?v=4" alt="Muthukumar Pattan" 
-                     class="w-16 h-16 rounded-2xl object-cover ring-2 ring-indigo-500/50 shadow-md"
-                     onerror="this.src='https://ui-avatars.com/api/?name=Muthukumar+Pattan&background=4f46e5&color=fff&size=128'" />
-                <span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-emerald-500 border-2 border-white dark:border-slate-900 flex items-center justify-center text-[10px] text-white">✓</span>
-              </div>
-              <div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white flex items-center gap-1.5">
-                  Muthukumar Pattan
-                </h3>
-                <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium">Quality Engineering &amp; SDET</p>
-                <p class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1 mt-0.5">
-                  <i data-lucide="map-pin" class="w-3 h-3"></i> Chennai, Tamil Nadu, India
-                </p>
-              </div>
-            </div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-[#000080] tracking-tight leading-tight">
+              Muthukumar Pattan
+            </h1>
+            <p class="text-base sm:text-lg font-bold text-gray-900">
+              Lead SDET at Freshworks &middot; Enterprise Quality Architect
+            </p>
 
-            <!-- Highlights Checklist -->
-            <div class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 mb-6 bg-slate-100/60 dark:bg-slate-900/60 p-3.5 rounded-xl border border-slate-200/50 dark:border-slate-800/80">
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-slate-500 dark:text-slate-400">Current Role:</span>
-                <span class="font-semibold text-slate-900 dark:text-white">Freshworks (Quality Engineering)</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-slate-500 dark:text-slate-400">Previous:</span>
-                <span class="font-semibold text-slate-900 dark:text-white">Infosys (Test Automation)</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-slate-500 dark:text-slate-400">Open Source:</span>
-                <span class="font-semibold text-emerald-600 dark:text-emerald-400">SeleniumHQ / Selenium</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="font-medium text-slate-500 dark:text-slate-400">Mentorship:</span>
-                <span class="font-semibold text-indigo-600 dark:text-indigo-400">Topmate Career Coach</span>
-              </div>
-            </div>
+            <p class="text-sm text-gray-800 leading-relaxed font-sans">
+              Results-driven Technology and Test Automation Leader with over 8 years of engineering mastery across 
+              <strong>Banking &amp; Financial Services (BFSI)</strong>, 
+              <strong>Health Insurance (UnitedHealth Group)</strong>, and 
+              <strong>Hyper-Scale SaaS (Freshworks)</strong>. Open source contributor to <strong>SeleniumHQ</strong>, 
+              builder of autonomous AI agent workflows, and verified career coach on <strong>Topmate</strong>.
+            </p>
 
-            <!-- Direct Contact buttons inside card -->
-            <div class="grid grid-cols-2 gap-2">
-              <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer"
-                 class="py-2 px-3 text-center rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors">
-                <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i>
-                <span>Book Topmate</span>
+            <!-- Quick Action Bevel Row -->
+            <div class="pt-2 flex flex-wrap gap-2">
+              <a href="https://www.linkedin.com/in/muthukumar-pattan-a0b8079a/" target="_blank" rel="noopener noreferrer" 
+                 class="win-btn win-btn-linkedin">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <span>Connect on LinkedIn</span>
               </a>
-              <button class="copy-btn py-2 px-3 text-center rounded-lg bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors"
-                      data-copy="muthukumar.pattan+fwinc@freshworks.com">
-                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+
+              <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer" 
+                 class="win-btn win-btn-topmate">
+                <i data-lucide="video" class="w-4 h-4"></i>
+                <span>Book 1:1 on Topmate</span>
+              </a>
+
+              <button class="win-btn copy-btn" data-copy="muthukumar.pattan+fwinc@freshworks.com">
+                <i data-lucide="mail" class="w-4 h-4"></i>
                 <span>Copy Work Email</span>
               </button>
             </div>
 
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Stats Counters Bar -->
-  <section id="stats" class="py-10 bg-white/70 dark:bg-slate-900/70 border-y border-slate-200 dark:border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        
-        <div class="p-4">
-          <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 font-mono">
-            <span class="counter-val" data-target="8">0</span>+
-          </div>
-          <p class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 mt-1">Years in Quality &amp; SDET</p>
-        </div>
-
-        <div class="p-4">
-          <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 font-mono">
-            <span class="counter-val" data-target="500">0</span>+
-          </div>
-          <p class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 mt-1">LinkedIn Network &amp; Peers</p>
-        </div>
-
-        <div class="p-4">
-          <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 font-mono">
-            <span>Selenium</span>
-          </div>
-          <p class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 mt-1">Core Open Source Contributor</p>
-        </div>
-
-        <div class="p-4">
-          <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 font-mono">
-            <span>100%</span>
-          </div>
-          <p class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 mt-1">Commitment to Quality</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- About Me Section -->
-  <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-xs font-bold text-indigo-600 dark:text-indigo-400 tracking-wider uppercase mb-2">About Me</h2>
-      <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        Building Resilient Quality Ecosystems
-      </p>
-      <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
-        Bridging manual and automated verification with scalable software architecture, continuous integration, and modern AI technologies.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      
-      <!-- Philosophy Card -->
-      <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-6">
-            <i data-lucide="shield-check" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Shift-Left Quality Strategy</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            I believe quality engineering begins the moment requirements are drafted. By incorporating testability, static analysis, contract tests, and automated validation early in the SDLC, engineering squads ship faster with extreme confidence.
-          </p>
-        </div>
-        <div class="pt-6 border-t border-slate-200 dark:border-slate-800 mt-6">
-          <span class="text-xs font-mono text-indigo-600 dark:text-indigo-400 font-semibold">Zero-Defect Culture</span>
-        </div>
-      </div>
-
-      <!-- Autonomous Agents & AI Card -->
-      <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-6">
-            <i data-lucide="cpu" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">AI Agents &amp; Modern Automation</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            Beyond traditional UI and API automation, I actively research and construct autonomous AI agent architectures. From multi-source summarization agents (Slack + Gmail + LLMs) to agent sandbox runtimes like OpenShell, I explore the frontier where QA meets AI.
-          </p>
-        </div>
-        <div class="pt-6 border-t border-slate-200 dark:border-slate-800 mt-6">
-          <span class="text-xs font-mono text-purple-600 dark:text-purple-400 font-semibold">Hermes Agent Challenge Contributor</span>
-        </div>
-      </div>
-
-      <!-- Mentorship & Community Card -->
-      <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6">
-            <i data-lucide="users" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Mentorship &amp; People Growth</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            Technology is only as impactful as the people wielding it. On Topmate, I mentor early-career QA professionals, SDETs, and software engineers on test architecture design, automation frameworks, interview strategies, and career breakthroughs.
-          </p>
-        </div>
-        <div class="pt-6 border-t border-slate-200 dark:border-slate-800 mt-6">
-          <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer" 
-             class="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-semibold hover:underline inline-flex items-center gap-1">
-            Book 30-min Video Call <i data-lucide="arrow-right" class="w-3 h-3"></i>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Professional Experience Timeline -->
-  <section id="experience" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-xs font-bold text-indigo-600 dark:text-indigo-400 tracking-wider uppercase mb-2">Track Record</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-          Professional Experience
-        </p>
-        <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm">
-          A trajectory of technical excellence in world-class SaaS and enterprise tech organizations.
-        </p>
-      </div>
-
-      <!-- Timeline Container -->
-      <div class="relative pl-6 sm:pl-8 border-l-2 border-indigo-500/30 dark:border-indigo-500/20 space-y-12">
-        
-        <!-- Experience Item 1: Freshworks -->
-        <div class="relative group">
-          <!-- Timeline Marker -->
-          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 border-4 border-slate-50 dark:border-[#090d16] timeline-dot"></div>
-
-          <div class="glass-card rounded-2xl p-6 sm:p-8">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-              <div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                  <span>Freshworks</span>
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700 dark:bg-indigo-900/60 dark:text-indigo-300">
-                    Current
-                  </span>
-                </h3>
-                <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400">Quality Engineering &amp; SDET</p>
+            <!-- 90s Quick Stat LCD Ticker -->
+            <div class="pt-3 grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <div class="win-sunken-gray p-2 text-center">
+                <div class="text-xs text-gray-700 font-bold uppercase">Experience</div>
+                <div class="text-lg font-extrabold text-[#000080] font-mono">8+ Years</div>
               </div>
-              <div class="text-xs font-mono text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Chennai, Tamil Nadu, India
+              <div class="win-sunken-gray p-2 text-center">
+                <div class="text-xs text-gray-700 font-bold uppercase">Open Source</div>
+                <div class="text-lg font-extrabold text-[#008000] font-mono">SeleniumHQ</div>
+              </div>
+              <div class="win-sunken-gray p-2 text-center">
+                <div class="text-xs text-gray-700 font-bold uppercase">Domain Depth</div>
+                <div class="text-lg font-extrabold text-[#800080] font-mono">Banking &amp; UHG</div>
+              </div>
+              <div class="win-sunken-gray p-2 text-center">
+                <div class="text-xs text-gray-700 font-bold uppercase">Role</div>
+                <div class="text-lg font-extrabold text-[#000080] font-mono">Lead SDET</div>
               </div>
             </div>
 
-            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-              Driving automated verification, high-reliability test infrastructure, and quality engineering initiatives across enterprise-grade SaaS products.
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- 90s Window Status Bar -->
+      <div class="win-sunken-gray px-3 py-1 text-xs flex items-center justify-between border-t border-gray-400">
+        <span>Ready. Connected to host: FRESHWORKS-PROD-CH</span>
+        <span class="font-mono">Security: High &middot; Encryption: SSL 3.0</span>
+      </div>
+
+    </main>
+
+    <!-- WINDOW 2: ENTERPRISE DOMAIN EXPERTISE & CAREER EXPERIENCE (TABBED) -->
+    <section class="win-raised-heavy">
+      
+      <div class="win-titlebar">
+        <div class="win-titlebar-title">
+          <i data-lucide="layers" class="w-4 h-4"></i>
+          <span>Experience_Explorer.exe - [Enterprise Domains &amp; Career Roles]</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <button class="win-titlebar-btn">_</button>
+          <button class="win-titlebar-btn">□</button>
+          <button class="win-titlebar-btn">✕</button>
+        </div>
+      </div>
+
+      <div class="p-3">
+        <!-- 90s Tab Header -->
+        <div class="flex flex-wrap border-b-2 border-gray-400 pl-2">
+          <button class="win-tab active" data-tab="tab-domains">
+            🏛️ Enterprise Domains (Banking &amp; Insurance)
+          </button>
+          <button class="win-tab" data-tab="tab-freshworks">
+            ⚡ Freshworks (Lead SDET)
+          </button>
+          <button class="win-tab" data-tab="tab-infosys">
+            🏢 Infosys (Test Automation Lead)
+          </button>
+          <button class="win-tab" data-tab="tab-skills">
+            🛠️ Technical Mastery Matrix
+          </button>
+        </div>
+
+        <!-- Tab 1: Enterprise Domains (Banking, UnitedHealth Group, Insurance) -->
+        <div id="tab-domains" class="tab-panel p-4 bg-[#c0c0c0] win-sunken-gray mt-2 space-y-4">
+          <div class="bg-white p-4 border border-black shadow-sm">
+            <h3 class="text-base font-bold text-[#000080] flex items-center gap-2 border-b pb-2 mb-3">
+              <i data-lucide="shield-check" class="w-5 h-5 text-emerald-600"></i>
+              Core Enterprise Domains: Banking &amp; Financial Services (BFSI) + UnitedHealth Group (Health Insurance)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-800">
+              
+              <!-- Banking Domain -->
+              <div class="border border-gray-300 p-3 bg-gray-50">
+                <div class="flex items-center gap-2 font-bold text-sm text-[#000080] mb-2">
+                  <i data-lucide="landmark" class="w-4 h-4 text-blue-700"></i>
+                  Banking &amp; Financial Services (BFSI)
+                </div>
+                <ul class="space-y-1.5 list-disc list-inside">
+                  <li><strong>Core Banking Systems:</strong> Automated verification of multi-currency ledgers, fund transfers, transaction rails, and retail banking flows.</li>
+                  <li><strong>Payment Gateways &amp; Clearing:</strong> Testing credit/debit processing, merchant settlements, payment switches, and reconciliation engines.</li>
+                  <li><strong>Regulatory &amp; Security Compliance:</strong> Strict validation of SOX, PCI-DSS compliance, anti-money laundering (AML) controls, and audit trails.</li>
+                  <li><strong>Batch &amp; Backend Verification:</strong> High-volume end-of-day (EOD) batch processing, database consistency testing, and low-latency API contracts.</li>
+                </ul>
+              </div>
+
+              <!-- Health Insurance & UnitedHealth Group (UHG) -->
+              <div class="border border-gray-300 p-3 bg-gray-50">
+                <div class="flex items-center gap-2 font-bold text-sm text-[#000080] mb-2">
+                  <i data-lucide="heart-pulse" class="w-4 h-4 text-rose-700"></i>
+                  Healthcare &amp; Health Insurance (UnitedHealth Group)
+                </div>
+                <ul class="space-y-1.5 list-disc list-inside">
+                  <li><strong>Claims Adjudication:</strong> End-to-end automated testing for UnitedHealth Group health insurance claims processing, rules validation, and payout calculations.</li>
+                  <li><strong>EDI Healthcare Transactions:</strong> Comprehensive automated validation of HIPAA EDI standards (837 Claims, 835 Remittance, 834 Enrollment, 270/271 Eligibility).</li>
+                  <li><strong>Member &amp; Provider Portals:</strong> Cross-browser testing for member coverage, benefits verification, provider credentialing, and billing interfaces.</li>
+                  <li><strong>Data Confidentiality:</strong> Strict adherence to HIPAA data privacy mandates, synthetic test data generation, and protected health information (PHI) shielding.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Freshworks Experience -->
+        <div id="tab-freshworks" class="tab-panel hidden p-4 bg-[#c0c0c0] win-sunken-gray mt-2 space-y-3">
+          <div class="bg-white p-4 border border-black">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-2 border-b border-gray-300 mb-3">
+              <div>
+                <h3 class="text-base font-bold text-[#000080]">Freshworks &middot; Lead SDET</h3>
+                <p class="text-xs text-gray-600 font-semibold">Chennai, Tamil Nadu, India | Current</p>
+              </div>
+              <span class="retro-badge bg-emerald-700 text-white mt-1 sm:mt-0">CURRENT LEAD ROLE</span>
+            </div>
+            
+            <p class="text-xs text-gray-800 leading-relaxed mb-3">
+              Directing quality engineering strategy and large-scale automated test frameworks for hyper-scale SaaS products serving hundreds of thousands of customer agents globally.
             </p>
 
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-5">
-              <li class="flex items-start gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 flex-shrink-0 mt-0.5"></i>
-                <span>Architecting and maintaining robust end-to-end automation test suites covering complex business workflows, multi-tenant setups, and high-concurrency scenarios.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 flex-shrink-0 mt-0.5"></i>
-                <span>Implementing Shift-Left testing frameworks and CI/CD quality gates that drastically reduce release regressions and accelerate turnaround times.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 flex-shrink-0 mt-0.5"></i>
-                <span>Mentoring cross-functional squad members in automation best practices, clean test architecture, and maintainability.</span>
-              </li>
+            <ul class="text-xs text-gray-800 space-y-2 list-disc list-inside">
+              <li>Architecting multi-tenant, distributed test automation suites that run concurrently across global cloud clusters.</li>
+              <li>Implementing robust CI/CD quality gates, drastically reducing post-deployment defects and accelerating sprint delivery cadences.</li>
+              <li>Mentoring SDETs and quality engineers in scalable framework design, clean code practices, and non-functional test engineering.</li>
             </ul>
-
-            <div class="flex flex-wrap gap-1.5">
-              <span class="tech-badge">SaaS Quality Strategy</span>
-              <span class="tech-badge">Selenium WebDriver</span>
-              <span class="tech-badge">API Automation</span>
-              <span class="tech-badge">CI/CD Pipelines</span>
-              <span class="tech-badge">Java / Python</span>
-              <span class="tech-badge">Distributed Testing</span>
-            </div>
           </div>
         </div>
 
-        <!-- Experience Item 2: Infosys -->
-        <div class="relative group">
-          <!-- Timeline Marker -->
-          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-400 dark:bg-slate-600 border-4 border-slate-50 dark:border-[#090d16]"></div>
-
-          <div class="glass-card rounded-2xl p-6 sm:p-8">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+        <!-- Tab 3: Infosys Experience -->
+        <div id="tab-infosys" class="tab-panel hidden p-4 bg-[#c0c0c0] win-sunken-gray mt-2 space-y-3">
+          <div class="bg-white p-4 border border-black">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-2 border-b border-gray-300 mb-3">
               <div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Infosys</h3>
-                <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Senior Test Automation Specialist / Test Lead</p>
+                <h3 class="text-base font-bold text-[#000080]">Infosys &middot; Test Lead / Senior Test Automation Specialist</h3>
+                <p class="text-xs text-gray-600 font-semibold">Enterprise Banking, Healthcare &amp; Insurance Services</p>
               </div>
-              <div class="text-xs font-mono text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-                <i data-lucide="building-2" class="w-3.5 h-3.5"></i> Enterprise Quality Services
-              </div>
+              <span class="retro-badge bg-blue-800 text-white mt-1 sm:mt-0">ENTERPRISE DELIVERY</span>
             </div>
-
-            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-              Led test automation initiatives and engineering deliverables for global enterprise clientele, establishing modern frameworks from the ground up.
+            
+            <p class="text-xs text-gray-800 leading-relaxed mb-3">
+              Delivered enterprise-grade test automation architectures for top-tier global institutions in the Banking, UnitedHealth Group, and Insurance sectors.
             </p>
 
-            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-5">
-              <li class="flex items-start gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 flex-shrink-0 mt-0.5"></i>
-                <span>Designed scalable Hybrid and Data-Driven test automation frameworks with Selenium, TestNG, and Page Object Model patterns.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 flex-shrink-0 mt-0.5"></i>
-                <span>Automated regression suites of thousands of test cases, decreasing test execution cycles by over 60%.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 flex-shrink-0 mt-0.5"></i>
-                <span>Formulated QA governance guidelines, test strategy documents, and client-facing executive dashboards.</span>
-              </li>
+            <ul class="text-xs text-gray-800 space-y-2 list-disc list-inside">
+              <li>Designed and deployed hybrid automation frameworks leveraging Selenium WebDriver, Java, TestNG, and CI/CD pipelines.</li>
+              <li>Spearheaded regression automation suites comprising thousands of mission-critical scenarios, cutting manual execution overhead by over 60%.</li>
+              <li>Authored QA governance policies, risk-based testing matrices, and client-facing executive dashboards.</li>
             </ul>
+          </div>
+        </div>
 
-            <div class="flex flex-wrap gap-1.5">
-              <span class="tech-badge">Framework Architecture</span>
-              <span class="tech-badge">TestNG &amp; JUnit</span>
-              <span class="tech-badge">Jenkins CI</span>
-              <span class="tech-badge">Regression Automation</span>
-              <span class="tech-badge">Enterprise QA</span>
+        <!-- Tab 4: Technical Skills Matrix -->
+        <div id="tab-skills" class="tab-panel hidden p-4 bg-[#c0c0c0] win-sunken-gray mt-2 space-y-3">
+          <div class="bg-white p-4 border border-black grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+            <div>
+              <h4 class="font-bold text-[#000080] border-b pb-1 mb-2">Automated Testing &amp; SDET</h4>
+              <p class="text-gray-700 leading-relaxed">
+                Selenium WebDriver &middot; Playwright &middot; Cypress &middot; TestNG &middot; JUnit &middot; RestAssured &middot; Postman &middot; Cucumber BDD &middot; Page Object Model (POM)
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold text-[#000080] border-b pb-1 mb-2">Languages &amp; Stacks</h4>
+              <p class="text-gray-700 leading-relaxed">
+                Java &middot; Python &middot; JavaScript (ES6+) &middot; TypeScript &middot; Next.js &middot; React &middot; SQL / Relational Databases &middot; Shell Scripting
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold text-[#000080] border-b pb-1 mb-2">DevOps &amp; AI Agents</h4>
+              <p class="text-gray-700 leading-relaxed">
+                GitHub Actions &middot; Jenkins CI &middot; Docker &middot; AWS &middot; Hermes Agent &middot; OpenShell Runtimes &middot; Shift-Left Quality Gates
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- Experience Item 3: Education & Academic Foundations -->
-        <div class="relative group">
-          <!-- Timeline Marker -->
-          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-slate-50 dark:border-[#090d16]"></div>
-
-          <div class="glass-card rounded-2xl p-6 sm:p-8">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-              <div>
-                <h3 class="text-lg font-bold text-slate-900 dark:text-white">Academic Foundation &amp; Computer Science</h3>
-                <p class="text-xs font-medium text-slate-600 dark:text-slate-400">Jairam Arts and Science College</p>
-              </div>
-              <div class="text-xs font-mono text-slate-500 dark:text-slate-400">
-                2012 &ndash; 2015
-              </div>
-            </div>
-            <p class="text-xs text-slate-500 dark:text-slate-400">
-              Core studies in computing fundamentals, software engineering methodologies, algorithms, and database systems.
-            </p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
 
-  <!-- Technical Skills & Mastery Matrix -->
-  <section id="skills" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <h2 class="text-xs font-bold text-indigo-600 dark:text-indigo-400 tracking-wider uppercase mb-2">Capabilities</h2>
-      <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        Technical Mastery &amp; Tooling
-      </p>
-      <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm">
-        A deep toolkit spanning quality engineering, developer tooling, autonomous AI, and modern web frameworks.
-      </p>
-    </div>
+      <div class="win-sunken-gray px-3 py-1 text-xs flex justify-between border-t border-gray-400">
+        <span>Domains: Banking | UnitedHealth Group | Insurance | SaaS</span>
+        <span>Standard: IEEE 829 &middot; ISO 9001</span>
+      </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    </section>
+
+    <!-- WINDOW 3: RETRO 90s GAME - "BUG HUNTER '95" (SDET Edition) -->
+    <section class="win-raised-heavy">
       
-      <!-- Category 1: Test Automation & SDET -->
-      <div class="glass-card rounded-2xl p-6 space-y-4">
-        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
-          <i data-lucide="check-square" class="w-5 h-5"></i>
+      <div class="win-titlebar">
+        <div class="win-titlebar-title">
+          <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+          <span>BugHunter95.exe - [SDET Bug Smasher Arcade]</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Test Automation &amp; SDET</h3>
-        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-          Comprehensive testing architectures from unit to cross-browser E2E.
-        </p>
-        <div class="flex flex-wrap gap-1.5 pt-2">
-          <span class="tech-badge">Selenium WebDriver</span>
-          <span class="tech-badge">Playwright</span>
-          <span class="tech-badge">Cypress</span>
-          <span class="tech-badge">TestNG / JUnit</span>
-          <span class="tech-badge">RestAssured</span>
-          <span class="tech-badge">Postman</span>
-          <span class="tech-badge">Cucumber BDD</span>
-          <span class="tech-badge">Page Object Model</span>
+        <div class="flex items-center gap-1">
+          <button class="win-titlebar-btn">_</button>
+          <button class="win-titlebar-btn">□</button>
+          <button class="win-titlebar-btn">✕</button>
         </div>
       </div>
 
-      <!-- Category 2: AI & Agentic Engineering -->
-      <div class="glass-card rounded-2xl p-6 space-y-4">
-        <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center font-bold">
-          <i data-lucide="bot" class="w-5 h-5"></i>
-        </div>
-        <h3 class="text-lg font-bold text-slate-900 dark:text-white">AI Agents &amp; Workflows</h3>
-        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-          Designing autonomous agent pipelines, integrations, and secure runtimes.
-        </p>
-        <div class="flex flex-wrap gap-1.5 pt-2">
-          <span class="tech-badge">Autonomous Agents</span>
-          <span class="tech-badge">Hermes Agent</span>
-          <span class="tech-badge">OpenShell Runtimes</span>
-          <span class="tech-badge">Slack API Agents</span>
-          <span class="tech-badge">Gmail API Pipelines</span>
-          <span class="tech-badge">LLM Prompt Tuning</span>
-          <span class="tech-badge">Context Summarizers</span>
-        </div>
-      </div>
-
-      <!-- Category 3: Languages & Full-Stack -->
-      <div class="glass-card rounded-2xl p-6 space-y-4">
-        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center font-bold">
-          <i data-lucide="code-2" class="w-5 h-5"></i>
-        </div>
-        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Languages &amp; Web</h3>
-        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-          Writing clean, testable application code and automated test scripts.
-        </p>
-        <div class="flex flex-wrap gap-1.5 pt-2">
-          <span class="tech-badge">Java</span>
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">JavaScript (ES6+)</span>
-          <span class="tech-badge">TypeScript</span>
-          <span class="tech-badge">Next.js &amp; React</span>
-          <span class="tech-badge">Tailwind CSS</span>
-          <span class="tech-badge">Bash / Shell</span>
-          <span class="tech-badge">JSON / YAML</span>
-        </div>
-      </div>
-
-      <!-- Category 4: DevOps & Quality Architecture -->
-      <div class="glass-card rounded-2xl p-6 space-y-4">
-        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
-          <i data-lucide="git-merge" class="w-5 h-5"></i>
-        </div>
-        <h3 class="text-lg font-bold text-slate-900 dark:text-white">DevOps &amp; Infrastructure</h3>
-        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-          Continuous testing gates, containerized test runners, and metrics.
-        </p>
-        <div class="flex flex-wrap gap-1.5 pt-2">
-          <span class="tech-badge">GitHub Actions</span>
-          <span class="tech-badge">Jenkins Pipelines</span>
-          <span class="tech-badge">Docker Containers</span>
-          <span class="tech-badge">Git &amp; Version Control</span>
-          <span class="tech-badge">Shift-Left Quality</span>
-          <span class="tech-badge">SaaS Release Gates</span>
-          <span class="tech-badge">Root Cause Analysis</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Featured Projects & Open Source Section -->
-  <section id="projects" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-xs font-bold text-indigo-600 dark:text-indigo-400 tracking-wider uppercase mb-2">Showcase</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-          Featured Projects &amp; Open Source
-        </p>
-        <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm">
-          Hands-on contributions to production software, open-source frameworks, and intelligent agent prototypes.
-        </p>
-
-        <!-- Project Filter Buttons -->
-        <div class="flex flex-wrap justify-center gap-2 mt-8">
-          <button type="button" data-filter="all" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-indigo-600 text-white shadow-md transition-all">
-            All Work
-          </button>
-          <button type="button" data-filter="open-source" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
-            Open Source
-          </button>
-          <button type="button" data-filter="ai-agent" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
-            AI &amp; Automation
-          </button>
-          <button type="button" data-filter="web-apps" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
-            Web Applications
-          </button>
-        </div>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="p-4 sm:p-6 bg-[#c0c0c0]">
         
-        <!-- Project 1: Selenium Open Source -->
-        <div class="project-card glass-card rounded-2xl p-7 flex flex-col justify-between" data-category="open-source">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-500/20">
-                <i data-lucide="git-pull-request" class="w-3.5 h-3.5"></i> Open Source Contribution
-              </span>
-              <a href="https://github.com/BckupMuthu/selenium" target="_blank" rel="noopener noreferrer" 
-                 class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="View Repository">
-                <i data-lucide="github" class="w-5 h-5"></i>
-              </a>
-            </div>
-
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
-              SeleniumHQ / selenium
-            </h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-              Contributed to the world’s most widely used browser automation framework. Worked on core JavaScript/Node bindings and framework stabilization, ensuring rock-solid test execution reliability for millions of developers worldwide.
-            </p>
-
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="tech-badge">Java</span>
-              <span class="tech-badge">JavaScript</span>
-              <span class="tech-badge">WebDriver</span>
-              <span class="tech-badge">Open Source</span>
-              <span class="tech-badge">Browser Automation</span>
-            </div>
-          </div>
-
-          <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-semibold">
-            <span class="text-slate-500 font-mono">BckupMuthu/selenium</span>
-            <a href="https://github.com/SeleniumHQ/selenium" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:underline inline-flex items-center gap-1">
-              Upstream SeleniumHQ <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 2: Daily Summary Agent (Hermes Challenge) -->
-        <div class="project-card glass-card rounded-2xl p-7 flex flex-col justify-between" data-category="ai-agent">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 dark:bg-purple-950/60 dark:text-purple-300 border border-purple-500/20">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> AI Agent Challenge
-              </span>
-              <a href="https://github.com/BckupMuthu/Daily-Summary-Agent-Hermes-" target="_blank" rel="noopener noreferrer" 
-                 class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="View Repository">
-                <i data-lucide="github" class="w-5 h-5"></i>
-              </a>
-            </div>
-
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
-              Daily Summary Agent (Hermes Challenge)
-            </h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-              An autonomous AI workflow built for the DEV Hermes Agent Challenge. Aggregates multi-channel notifications from Gmail and Slack, passes them through intelligent summarization pipelines, and formats a high-priority morning digest for busy engineers.
-            </p>
-
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">Hermes LLM</span>
-              <span class="tech-badge">Slack API</span>
-              <span class="tech-badge">Gmail API</span>
-              <span class="tech-badge">Autonomous Workflows</span>
-            </div>
-          </div>
-
-          <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-semibold">
-            <span class="text-slate-500 font-mono">BckupMuthu/Daily-Summary-Agent-Hermes-</span>
-            <a href="https://github.com/BckupMuthu/Daily-Summary-Agent-Hermes-" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:underline inline-flex items-center gap-1">
-              View Code &amp; Pipeline <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 3: STAR Server (Democratic Voting Engine) -->
-        <div class="project-card glass-card rounded-2xl p-7 flex flex-col justify-between" data-category="open-source">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-800 dark:bg-sky-950/60 dark:text-sky-300 border border-sky-500/20">
-                <i data-lucide="vote" class="w-3.5 h-3.5"></i> Civic Tech / Open Source
-              </span>
-              <a href="https://github.com/BckupMuthu/star-server" target="_blank" rel="noopener noreferrer" 
-                 class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="View Repository">
-                <i data-lucide="github" class="w-5 h-5"></i>
-              </a>
-            </div>
-
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
-              STAR Voting Platform (star-server)
-            </h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-              Contributed to the STAR Voting backend platform—an advanced electoral and polling system allowing voters to score options 0-5 for true consensus representation. Built with TypeScript and secure voting calculation algorithms.
-            </p>
-
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="tech-badge">TypeScript</span>
-              <span class="tech-badge">Node.js</span>
-              <span class="tech-badge">Express</span>
-              <span class="tech-badge">AGPL-3.0</span>
-              <span class="tech-badge">Consensus Algorithms</span>
-            </div>
-          </div>
-
-          <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-semibold">
-            <span class="text-slate-500 font-mono">BckupMuthu/star-server</span>
-            <a href="https://github.com/BckupMuthu/star-server" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:underline inline-flex items-center gap-1">
-              Explore Repository <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 4: NextJs Application -->
-        <div class="project-card glass-card rounded-2xl p-7 flex flex-col justify-between" data-category="web-apps">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-500/20">
-                <i data-lucide="layout" class="w-3.5 h-3.5"></i> Full-Stack Web App
-              </span>
-              <a href="https://github.com/BckupMuthu/NextJs" target="_blank" rel="noopener noreferrer" 
-                 class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors" title="View Repository">
-                <i data-lucide="github" class="w-5 h-5"></i>
-              </a>
-            </div>
-
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
-              Next.js Modern Interactive Application
-            </h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-              Modern full-stack web application exploring React Server Components, Tailwind styling, server-side data fetching, and fluid UI micro-interactions.
-            </p>
-
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="tech-badge">Next.js</span>
-              <span class="tech-badge">React</span>
-              <span class="tech-badge">Tailwind CSS</span>
-              <span class="tech-badge">JavaScript</span>
-              <span class="tech-badge">Responsive Design</span>
-            </div>
-          </div>
-
-          <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-semibold">
-            <span class="text-slate-500 font-mono">BckupMuthu/NextJs</span>
-            <a href="https://github.com/BckupMuthu/NextJs" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:underline inline-flex items-center gap-1">
-              View Next.js Repo <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Topmate Mentorship & Coaching Spotlight Section -->
-  <section id="mentorship" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="glass-card rounded-3xl p-8 sm:p-12 lg:p-16 border-2 border-indigo-500/20 shadow-2xl relative overflow-hidden">
-      
-      <!-- Background accent gradient -->
-      <div class="absolute -top-24 -right-24 w-80 h-80 bg-gradient-to-br from-indigo-500/20 to-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
-        
-        <div class="lg:col-span-7 space-y-5">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 text-xs font-bold uppercase tracking-wider">
-            <i data-lucide="video" class="w-3.5 h-3.5"></i> Topmate.io Verified Coach
-          </div>
+        <div class="max-w-xl mx-auto win-raised p-4">
           
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Level Up Your SDET &amp; Quality Engineering Career
-          </h2>
+          <!-- Game Header / Scoreboard in 90s Minesweeper Style -->
+          <div class="win-sunken-gray p-2 mb-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold font-mono">BUGS SQUASHED:</span>
+              <div id="game-bugs" class="win-lcd">00</div>
+            </div>
 
-          <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
-            Transitioning from manual QA to SDET? Looking to architect a resilient automation framework for your company? Or preparing for technical interviews at high-growth tech companies?
+            <!-- Classic Restart Smiley Face Button -->
+            <button id="game-reset-btn" class="win-btn px-2 py-1 text-lg" title="Restart Game">
+              <span id="game-face-icon">🙂</span>
+            </button>
+
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold font-mono">SCORE:</span>
+              <div id="game-score" class="win-lcd">000</div>
+            </div>
+          </div>
+
+          <!-- Game Canvas Frame -->
+          <div class="flex justify-center bg-black p-1 win-sunken">
+            <canvas id="game-canvas" width="360" height="220" class="max-w-full"></canvas>
+          </div>
+
+          <!-- Controls & Instructions -->
+          <div class="mt-3 text-center text-xs text-gray-700 space-y-1">
+            <p><strong>HOW TO PLAY:</strong> Use <strong>Arrow Keys</strong> or <strong>WASD</strong> (or buttons below) to steer the <strong>QA Tester</strong> cursor.</p>
+            <p class="text-[11px] text-gray-600">
+              Squash 🐛 <strong>Bugs</strong> (+15 pts), fix 🔥 <strong>Blockers</strong> (+25 pts), and collect ✓ <strong>Passing Tests</strong> (+10 pts)!
+            </p>
+          </div>
+
+          <!-- Mobile Touch D-Pad Controls -->
+          <div class="mt-3 flex flex-col items-center gap-1 sm:hidden">
+            <button id="btn-up" class="win-btn w-12 h-10 font-bold">▲</button>
+            <div class="flex gap-2">
+              <button id="btn-left" class="win-btn w-12 h-10 font-bold">◀</button>
+              <button id="btn-down" class="win-btn w-12 h-10 font-bold">▼</button>
+              <button id="btn-right" class="win-btn w-12 h-10 font-bold">▶</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="win-sunken-gray px-3 py-1 text-xs flex justify-between border-t border-gray-400">
+        <span>BugHunter v1.0 &middot; 8-bit WebAudio Sound Engine</span>
+        <span>Status: Ready to Test</span>
+      </div>
+
+    </section>
+
+    <!-- WINDOW 4: OPEN SOURCE & AI AGENT PROJECTS -->
+    <section class="win-raised-heavy">
+      
+      <div class="win-titlebar">
+        <div class="win-titlebar-title">
+          <i data-lucide="folder-git-2" class="w-4 h-4"></i>
+          <span>OpenSource_Projects.exe - [Public Code Repositories]</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <button class="win-titlebar-btn">_</button>
+          <button class="win-titlebar-btn">□</button>
+          <button class="win-titlebar-btn">✕</button>
+        </div>
+      </div>
+
+      <div class="p-4 sm:p-6 bg-[#c0c0c0] grid grid-cols-1 md:grid-cols-2 gap-4">
+        
+        <!-- Repo 1: SeleniumHQ -->
+        <div class="win-sunken-gray p-4 bg-white border border-gray-400">
+          <div class="flex items-center justify-between pb-2 border-b border-gray-200 mb-2">
+            <span class="font-bold text-sm text-[#000080]">SeleniumHQ / selenium</span>
+            <span class="retro-badge bg-emerald-700 text-white">CORE CONTRIBUTOR</span>
+          </div>
+          <p class="text-xs text-gray-700 leading-relaxed mb-3">
+            Open-source contributions to the world's standard browser automation framework. Enhanced JavaScript/Node bindings and runtime stabilization for millions of automated test suites.
+          </p>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-200 text-xs">
+            <span class="font-mono text-gray-600">Java &middot; JS &middot; WebDriver</span>
+            <a href="https://github.com/SeleniumHQ/selenium" target="_blank" rel="noopener noreferrer" class="font-bold text-blue-700 underline">
+              View Upstream &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Repo 2: Daily Summary Agent (Hermes Challenge) -->
+        <div class="win-sunken-gray p-4 bg-white border border-gray-400">
+          <div class="flex items-center justify-between pb-2 border-b border-gray-200 mb-2">
+            <span class="font-bold text-sm text-[#000080]">Daily-Summary-Agent-Hermes-</span>
+            <span class="retro-badge bg-purple-700 text-white">AI CHALLENGE</span>
+          </div>
+          <p class="text-xs text-gray-700 leading-relaxed mb-3">
+            Autonomous multi-source AI workflow created for the DEV Hermes Agent Challenge. Synthesizes daily unread updates from Gmail &amp; Slack into concise markdown digests using LLMs.
+          </p>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-200 text-xs">
+            <span class="font-mono text-gray-600">Python &middot; Slack &middot; Gmail</span>
+            <a href="https://github.com/BckupMuthu/Daily-Summary-Agent-Hermes-" target="_blank" rel="noopener noreferrer" class="font-bold text-blue-700 underline">
+              View Source &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Repo 3: STAR Server -->
+        <div class="win-sunken-gray p-4 bg-white border border-gray-400">
+          <div class="flex items-center justify-between pb-2 border-b border-gray-200 mb-2">
+            <span class="font-bold text-sm text-[#000080]">star-server (STAR Voting Platform)</span>
+            <span class="retro-badge bg-blue-700 text-white">CIVIC TECH</span>
+          </div>
+          <p class="text-xs text-gray-700 leading-relaxed mb-3">
+            Contributions to the open-source STAR Voting election server backend, enabling 0-5 scored voting calculations for representative democracy.
+          </p>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-200 text-xs">
+            <span class="font-mono text-gray-600">TypeScript &middot; Node.js</span>
+            <a href="https://github.com/BckupMuthu/star-server" target="_blank" rel="noopener noreferrer" class="font-bold text-blue-700 underline">
+              View Source &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Repo 4: Next.js Fullstack -->
+        <div class="win-sunken-gray p-4 bg-white border border-gray-400">
+          <div class="flex items-center justify-between pb-2 border-b border-gray-200 mb-2">
+            <span class="font-bold text-sm text-[#000080]">NextJs Full-Stack Web Application</span>
+            <span class="retro-badge bg-gray-800 text-white">WEB APP</span>
+          </div>
+          <p class="text-xs text-gray-700 leading-relaxed mb-3">
+            Full-stack web application exploring React Server Components, server actions, and responsive layout architectures.
+          </p>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-200 text-xs">
+            <span class="font-mono text-gray-600">Next.js &middot; React &middot; Tailwind</span>
+            <a href="https://github.com/BckupMuthu/NextJs" target="_blank" rel="noopener noreferrer" class="font-bold text-blue-700 underline">
+              View Source &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- WINDOW 5: TOPMATE MENTORSHIP & CONTACT -->
+    <section class="win-raised-heavy">
+      
+      <div class="win-titlebar">
+        <div class="win-titlebar-title">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Mentorship_And_Contact.exe - [Topmate Booking &amp; Inquiries]</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <button class="win-titlebar-btn">_</button>
+          <button class="win-titlebar-btn">□</button>
+          <button class="win-titlebar-btn">✕</button>
+        </div>
+      </div>
+
+      <div class="p-4 sm:p-6 bg-[#c0c0c0] grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Left: Topmate Spotlight -->
+        <div class="win-sunken-gray p-4 bg-white border border-gray-400 space-y-3">
+          <div class="flex items-center gap-2 pb-2 border-b">
+            <span class="text-rose-600 font-extrabold text-lg">topmate.io</span>
+            <span class="text-xs text-gray-600">/ muthukumar_pattan</span>
+          </div>
+
+          <h3 class="font-bold text-sm text-[#000080]">
+            1:1 Career Mentorship &amp; Automation Architecture Sessions
+          </h3>
+
+          <p class="text-xs text-gray-700 leading-relaxed">
+            Personalized 30-minute video coaching calls for QA professionals, SDETs, and software developers:
           </p>
 
-          <!-- Key Session Benefits -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-            <div class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-              <span><strong>QA to SDET Transition:</strong> Step-by-step roadmap from manual testing to automation architecture.</span>
-            </div>
-            <div class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-              <span><strong>Framework Review:</strong> Code audits, Page Object design, CI/CD integration fixes.</span>
-            </div>
-            <div class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-              <span><strong>Mock Interviews:</strong> Coding challenges, Selenium scenarios, and architecture deep dives.</span>
-            </div>
-            <div class="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5"></i>
-              <span><strong>Resume &amp; LinkedIn:</strong> Profile optimization to stand out to top tech recruiters.</span>
-            </div>
-          </div>
+          <ul class="text-xs text-gray-700 space-y-1.5 list-disc list-inside">
+            <li><strong>QA to SDET Transition:</strong> Step-by-step guidance from manual QA to test automation mastery.</li>
+            <li><strong>Framework Code Audits:</strong> Review your Selenium / Playwright / API automation code.</li>
+            <li><strong>Banking &amp; Insurance QA:</strong> Domain knowledge transfer for enterprise interviews.</li>
+            <li><strong>Mock Technical Interviews:</strong> Live coding, system design, and resume optimization.</li>
+          </ul>
 
-          <div class="pt-4 flex flex-wrap gap-4 items-center">
-            <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer"
-               class="px-6 py-3.5 rounded-xl font-bold text-white bg-indigo-600 hover:bg-indigo-500 shadow-xl shadow-indigo-600/30 hover:shadow-indigo-600/50 inline-flex items-center gap-2 transition-all transform hover:-translate-y-0.5">
-              <i data-lucide="calendar" class="w-5 h-5"></i>
-              <span>Book 30-min Video Call on Topmate</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
-              Direct 1:1 on Google Meet / Topmate
-            </span>
-          </div>
-
-        </div>
-
-        <!-- Mentorship Card Preview -->
-        <div class="lg:col-span-5 flex justify-center">
-          <div class="w-full max-w-sm rounded-2xl bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-800 shadow-xl">
-            <div class="flex items-center gap-3 pb-4 border-b border-slate-100 dark:border-slate-800">
-              <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg">
-                MP
-              </div>
-              <div>
-                <h4 class="font-bold text-slate-900 dark:text-white">Career Coach 1:1</h4>
-                <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium">@muthukumar_pattan</p>
-              </div>
-            </div>
-
-            <div class="py-5 space-y-3">
-              <div class="flex justify-between items-center text-sm">
-                <span class="text-slate-500 dark:text-slate-400">Duration</span>
-                <span class="font-semibold text-slate-900 dark:text-white">30 Minutes</span>
-              </div>
-              <div class="flex justify-between items-center text-sm">
-                <span class="text-slate-500 dark:text-slate-400">Format</span>
-                <span class="font-semibold text-slate-900 dark:text-white">1:1 Video Meeting</span>
-              </div>
-              <div class="flex justify-between items-center text-sm">
-                <span class="text-slate-500 dark:text-slate-400">Response Window</span>
-                <span class="font-semibold text-emerald-600 dark:text-emerald-400">Within 48 Hours</span>
-              </div>
-              <div class="flex justify-between items-center text-sm pt-2 border-t border-slate-100 dark:border-slate-800">
-                <span class="text-slate-500 dark:text-slate-400 font-medium">Special Follower Fee</span>
-                <span class="text-xl font-extrabold text-indigo-600 dark:text-indigo-400">₹299 <span class="text-xs text-slate-400 font-normal line-through">₹897</span></span>
-              </div>
-            </div>
-
-            <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer"
-               class="w-full block text-center py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-xs hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors">
-              Schedule Video Call &rarr;
+          <div class="pt-3 border-t">
+            <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer" 
+               class="win-btn win-btn-topmate w-full text-center py-2 text-xs">
+              <i data-lucide="video" class="w-4 h-4"></i>
+              <span>Schedule 1:1 Video Meeting on Topmate &rarr;</span>
             </a>
           </div>
         </div>
 
-      </div>
+        <!-- Right: Direct Message Form -->
+        <div class="win-sunken-gray p-4 bg-white border border-gray-400">
+          <h3 class="font-bold text-sm text-[#000080] pb-2 border-b mb-3">
+            Send a Professional Direct Message
+          </h3>
 
-    </div>
-  </section>
-
-  <!-- Insights & Thought Leadership Section -->
-  <section id="insights" class="py-20 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-xs font-bold text-indigo-600 dark:text-indigo-400 tracking-wider uppercase mb-2">Thoughts &amp; Articles</h2>
-        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-          Tech Insights &amp; Perspectives
-        </p>
-        <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm">
-          Sharing deep dives on AI agent security, software infrastructure vulnerabilities, and test engineering trends.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- Post 1 -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-mono text-indigo-600 dark:text-indigo-400 mb-2">AI Systems &amp; Security</div>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-snug">
-              Controlling Fleets of Autonomous AI Agents with OpenShell
-            </h3>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-              Why safe, sandboxed runtimes are indispensable when AI agents can read files, execute packages, and invoke private APIs without leaking corporate secrets or open-ended network access.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-400">LinkedIn Post</span>
-            <a href="https://www.linkedin.com/in/muthukumar-pattan-a0b8079a/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline inline-flex items-center gap-1">
-              Read discussion <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Post 2 -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-mono text-rose-600 dark:text-rose-400 mb-2">Vulnerability Analysis</div>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-snug">
-              Dormant Web Vulnerabilities: The Critical PHP Security Audits
-            </h3>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-              Examining vulnerabilities that lay dormant for over a decade until automated AI code audits uncovered them, highlighting the critical urgency of automated penetration testing and runtime protections.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-400">Security Bulletin</span>
-            <a href="https://www.linkedin.com/in/muthukumar-pattan-a0b8079a/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline inline-flex items-center gap-1">
-              Read alert <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Post 3 -->
-        <article class="glass-card rounded-2xl p-6 flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-mono text-purple-600 dark:text-purple-400 mb-2">Agent Architectures</div>
-            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-snug">
-              Architecting the Daily Summary Agent with Hermes LLM
-            </h3>
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-              Detailed breakdown of orchestrating multi-channel intake bots that pull asynchronous communications from Slack and Gmail to generate succinct, context-aware digests.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
-            <span class="text-slate-400">DEV Community</span>
-            <a href="https://github.com/BckupMuthu/Daily-Summary-Agent-Hermes-" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline inline-flex items-center gap-1">
-              View Architecture <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </article>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Contact & Connect Section -->
-  <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <h2 class="text-xs font-bold text-indigo-600 dark:text-indigo-400 tracking-wider uppercase mb-2">Get In Touch</h2>
-      <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-        Let's Connect &amp; Collaborate
-      </p>
-      <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm">
-        Whether you want to consult on test automation, discuss AI agent architectures, or book a 1:1 mentorship call.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-      
-      <!-- Contact Info Cards -->
-      <div class="lg:col-span-5 space-y-4">
-        
-        <!-- LinkedIn Link Card -->
-        <a href="https://www.linkedin.com/in/muthukumar-pattan-a0b8079a/" target="_blank" rel="noopener noreferrer" 
-           class="glass-card rounded-2xl p-5 flex items-center gap-4 group">
-          <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-600 dark:text-sky-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="linkedin" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm">LinkedIn</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400">linkedin.com/in/muthukumar-pattan-a0b8079a</p>
-          </div>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 ml-auto group-hover:text-sky-500 transition-colors"></i>
-        </a>
-
-        <!-- Topmate Link Card -->
-        <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer" 
-           class="glass-card rounded-2xl p-5 flex items-center gap-4 group">
-          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="calendar" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Topmate Mentorship</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400">topmate.io/muthukumar_pattan</p>
-          </div>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 ml-auto group-hover:text-indigo-500 transition-colors"></i>
-        </a>
-
-        <!-- GitHub Profile Card -->
-        <a href="https://github.com/BckupMuthu" target="_blank" rel="noopener noreferrer" 
-           class="glass-card rounded-2xl p-5 flex items-center gap-4 group">
-          <div class="w-12 h-12 rounded-xl bg-slate-500/10 text-slate-700 dark:text-slate-300 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="github" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm">GitHub Profile</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400">github.com/BckupMuthu</p>
-          </div>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 ml-auto group-hover:text-slate-900 dark:group-hover:text-white transition-colors"></i>
-        </a>
-
-        <!-- Location Card -->
-        <div class="glass-card rounded-2xl p-5 flex items-center gap-4">
-          <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center">
-            <i data-lucide="map-pin" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Location</h4>
-            <p class="text-xs text-slate-500 dark:text-slate-400">Chennai, Tamil Nadu, India</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Quick Message Form -->
-      <div class="lg:col-span-7">
-        <div class="glass-card rounded-2xl p-8 border border-slate-200 dark:border-slate-800">
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Send a Direct Message</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mb-6">
-            Fill in the details below to start an email conversation directly with me.
-          </p>
-
-          <form id="contact-form" class="space-y-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="name" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Name</label>
-                <input type="text" id="name" required placeholder="John Doe" 
-                       class="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all" />
-              </div>
-              <div>
-                <label for="email" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Your Email</label>
-                <input type="email" id="email" required placeholder="john@example.com" 
-                       class="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all" />
-              </div>
+          <form id="contact-form" class="space-y-2.5 text-xs">
+            <div>
+              <label for="c-name" class="block font-bold text-gray-700 mb-0.5">Your Name:</label>
+              <input type="text" id="c-name" required class="w-full win-sunken p-1.5 bg-white text-xs outline-none" />
             </div>
 
             <div>
-              <label for="subject" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Subject</label>
-              <input type="text" id="subject" required placeholder="Test Automation Consulting / Speaking / Mentorship" 
-                     class="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all" />
+              <label for="c-email" class="block font-bold text-gray-700 mb-0.5">Your Email:</label>
+              <input type="email" id="c-email" required class="w-full win-sunken p-1.5 bg-white text-xs outline-none" />
             </div>
 
             <div>
-              <label for="message" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Message</label>
-              <textarea id="message" rows="4" required placeholder="Hi Muthukumar, I came across your portfolio and wanted to discuss..." 
-                        class="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"></textarea>
+              <label for="c-subject" class="block font-bold text-gray-700 mb-0.5">Subject:</label>
+              <input type="text" id="c-subject" value="SDET / Quality Engineering Inquiry" required class="w-full win-sunken p-1.5 bg-white text-xs outline-none" />
             </div>
 
-            <button type="submit" 
-                    class="w-full py-3 rounded-xl font-bold text-white bg-indigo-600 hover:bg-indigo-500 shadow-md shadow-indigo-600/30 transition-all flex items-center justify-center gap-2">
-              <i data-lucide="send" class="w-4 h-4"></i>
+            <div>
+              <label for="c-message" class="block font-bold text-gray-700 mb-0.5">Message:</label>
+              <textarea id="c-message" rows="3" required class="w-full win-sunken p-1.5 bg-white text-xs outline-none"></textarea>
+            </div>
+
+            <button type="submit" class="win-btn font-bold w-full py-1.5 mt-2">
+              <i data-lucide="send" class="w-3.5 h-3.5"></i>
               <span>Send Message</span>
             </button>
           </form>
         </div>
+
       </div>
 
+      <!-- Footer Info Bar with 90s Hit Counter -->
+      <div class="win-sunken-gray px-3 py-2 text-xs flex flex-wrap items-center justify-between gap-2 border-t border-gray-400">
+        <div class="flex items-center gap-2">
+          <span>YOU ARE VISITOR NUMBER:</span>
+          <span id="visitor-count" class="win-lcd text-base py-0.5 px-2">010482</span>
+        </div>
+        <div class="text-gray-600 font-mono">
+          &copy; 2026 Muthukumar Pattan &middot; Hosted on GitHub Pages
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- 90S WINDOWS START MENU POPUP -->
+  <div id="start-menu" class="win-start-menu hidden">
+    <div class="win-start-banner">
+      WINDOWS 95
     </div>
-  </section>
+    <div class="win-start-items">
+      <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer" class="win-start-item">
+        <i data-lucide="video" class="w-4 h-4 text-rose-600"></i>
+        <span>Book on Topmate</span>
+      </a>
+      <a href="https://www.linkedin.com/in/muthukumar-pattan-a0b8079a/" target="_blank" rel="noopener noreferrer" class="win-start-item">
+        <i data-lucide="linkedin" class="w-4 h-4 text-blue-600"></i>
+        <span>LinkedIn Profile</span>
+      </a>
+      <a href="https://github.com/BckupMuthu" target="_blank" rel="noopener noreferrer" class="win-start-item">
+        <i data-lucide="github" class="w-4 h-4"></i>
+        <span>GitHub Repositories</span>
+      </a>
+      <div class="border-t border-gray-400 my-1"></div>
+      <a href="mailto:muthukumar.pattan+fwinc@freshworks.com" class="win-start-item">
+        <i data-lucide="mail" class="w-4 h-4"></i>
+        <span>Send Email</span>
+      </a>
+      <a href="#tab-domains" class="win-start-item">
+        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+        <span>Banking &amp; UHG Domains</span>
+      </a>
+    </div>
+  </div>
 
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        
-        <!-- Brand Info -->
-        <div class="flex items-center gap-3 text-center md:text-left">
-          <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-xs">
-            MP
-          </div>
-          <div>
-            <p class="text-white font-semibold">Muthukumar Pattan</p>
-            <p class="text-xs text-slate-500">Quality Engineering Lead &middot; SDET &middot; AI Builder</p>
-          </div>
-        </div>
+  <!-- 90S WINDOWS BOTTOM TASKBAR -->
+  <footer class="win-taskbar">
+    <div class="flex items-center gap-2">
+      <!-- Start Button -->
+      <button id="start-btn" class="win-start-btn">
+        <i data-lucide="terminal" class="w-4 h-4"></i>
+        <span>Start</span>
+      </button>
 
-        <!-- Social Icons -->
-        <div class="flex items-center gap-4">
-          <a href="https://github.com/BckupMuthu" target="_blank" rel="noopener noreferrer" 
-             class="w-9 h-9 rounded-full bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="GitHub">
-            <i data-lucide="github" class="w-4 h-4"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/muthukumar-pattan-a0b8079a/" target="_blank" rel="noopener noreferrer" 
-             class="w-9 h-9 rounded-full bg-slate-800 hover:bg-sky-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="LinkedIn">
-            <i data-lucide="linkedin" class="w-4 h-4"></i>
-          </a>
-          <a href="https://topmate.io/muthukumar_pattan" target="_blank" rel="noopener noreferrer" 
-             class="w-9 h-9 rounded-full bg-slate-800 hover:bg-emerald-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors" title="Topmate">
-            <i data-lucide="calendar" class="w-4 h-4"></i>
-          </a>
-        </div>
-
-        <!-- Copyright -->
-        <div class="text-xs text-slate-500 text-center md:text-right">
-          <p>&copy; 2026 Muthukumar Pattan. All rights reserved.</p>
-          <p class="mt-1">Hosted on <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 underline">GitHub Pages</a> (bckupmuthu.github.io)</p>
-        </div>
-
+      <!-- Active Window Tabs on Taskbar -->
+      <div class="win-sunken px-2 py-1 text-xs font-bold text-black flex items-center gap-1.5 hidden sm:flex bg-[#dcd8d8]">
+        <i data-lucide="monitor" class="w-3.5 h-3.5 text-[#000080]"></i>
+        <span>Muthukumar Pattan (Lead SDET)</span>
       </div>
+    </div>
+
+    <!-- System Tray -->
+    <div class="win-tray">
+      <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+      <i data-lucide="shield" class="w-3.5 h-3.5 text-blue-700"></i>
+      <span id="taskbar-clock">12:00 PM</span>
     </div>
   </footer>
 
-  <!-- Floating Back to Top Button -->
-  <button id="back-to-top" aria-label="Back to top" 
-          class="fixed bottom-6 right-6 w-11 h-11 rounded-xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-indigo-500 hover:scale-110 z-50">
-    <i data-lucide="arrow-up" class="w-5 h-5"></i>
-  </button>
-
-  <!-- Main JavaScript -->
+  <!-- Scripts -->
   <script src="js/main.js"></script>
-
-  <!-- Initialize Lucide Icons -->
   <script>
     lucide.createIcons();
   </script>

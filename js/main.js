@@ -1,263 +1,396 @@
 /**
- * Muthukumar Pattan - Portfolio Interactive Scripts
- * Pure vanilla JavaScript with zero external runtime dependencies.
+ * Muthukumar Pattan - Retro 90s Desktop & Portfolio System
+ * Lead SDET at Freshworks | Bug Hunter '95 Retro Engine
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-  initMobileMenu();
-  initScrollNav();
-  initProjectFilters();
-  initStatsCounter();
-  initBackToTop();
+  initTaskbarClock();
+  initStartMenu();
+  initTabNavigation();
+  initVisitorCounter();
+  initBugHunterGame();
   initCopyButtons();
   initContactForm();
 });
 
 /* ==========================================================================
-   1. Theme Management (Dark / Light)
+   1. Real-time 90s Taskbar Digital Clock
    ========================================================================== */
-function initTheme() {
-  const themeToggleBtn = document.getElementById('theme-toggle');
-  const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
+function initTaskbarClock() {
+  const clockEl = document.getElementById('taskbar-clock');
+  if (!clockEl) return;
 
-  // Check saved or preferred theme
-  const savedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    document.documentElement.classList.add('dark');
+  function update() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // 0 becomes 12
+    clockEl.textContent = `${hours}:${minutes} ${ampm}`;
+  }
+
+  update();
+  setInterval(update, 1000);
+}
+
+/* ==========================================================================
+   2. Windows 95 Start Menu
+   ========================================================================== */
+function initStartMenu() {
+  const startBtn = document.getElementById('start-btn');
+  const startMenu = document.getElementById('start-menu');
+
+  if (!startBtn || !startMenu) return;
+
+  startBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = !startMenu.classList.contains('hidden');
+    if (isOpen) {
+      startMenu.classList.add('hidden');
+      startBtn.classList.remove('open');
+    } else {
+      startMenu.classList.remove('hidden');
+      startBtn.classList.add('open');
+    }
+  });
+
+  // Close when clicking anywhere outside
+  document.addEventListener('click', (e) => {
+    if (!startMenu.contains(e.target) && e.target !== startBtn) {
+      startMenu.classList.add('hidden');
+      startBtn.classList.remove('open');
+    }
+  });
+
+  // Menu items click
+  document.querySelectorAll('.win-start-item').forEach(item => {
+    item.addEventListener('click', () => {
+      startMenu.classList.add('hidden');
+      startBtn.classList.remove('open');
+    });
+  });
+}
+
+/* ==========================================================================
+   3. Retro Tabs Navigation System
+   ========================================================================== */
+function initTabNavigation() {
+  const tabs = document.querySelectorAll('.win-tab');
+  const panels = document.querySelectorAll('.tab-panel');
+
+  if (!tabs.length || !panels.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-tab');
+
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.add('hidden'));
+
+      tab.classList.add('active');
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   4. 90s Web Counter Simulation
+   ========================================================================== */
+function initVisitorCounter() {
+  const counterEl = document.getElementById('visitor-count');
+  if (!counterEl) return;
+
+  let count = localStorage.getItem('sdet_visitor_count');
+  if (!count) {
+    count = 10482;
   } else {
-    document.documentElement.classList.remove('dark');
+    count = parseInt(count, 10) + 1;
   }
-
-  function toggleTheme() {
-    const isDark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    updateThemeIcons();
-  }
-
-  if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
-  if (themeToggleMobileBtn) themeToggleMobileBtn.addEventListener('click', toggleTheme);
-
-  // Update icons initially
-  updateThemeIcons();
-
-  // Listen for system changes if user hasn't explicitly chosen
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (!localStorage.getItem('theme')) {
-      if (e.matches) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-      updateThemeIcons();
-    }
-  });
-}
-
-function updateThemeIcons() {
-  const isDark = document.documentElement.classList.contains('dark');
-  const lightIcons = document.querySelectorAll('.theme-icon-light');
-  const darkIcons = document.querySelectorAll('.theme-icon-dark');
-
-  lightIcons.forEach(icon => {
-    icon.classList.toggle('hidden', !isDark);
-  });
-  darkIcons.forEach(icon => {
-    icon.classList.toggle('hidden', isDark);
-  });
+  localStorage.setItem('sdet_visitor_count', count);
+  counterEl.textContent = String(count).padStart(6, '0');
 }
 
 /* ==========================================================================
-   2. Mobile Menu
+   5. Web Audio Retro Synth Sound Effects
    ========================================================================== */
-function initMobileMenu() {
-  const menuToggle = document.getElementById('mobile-menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+class RetroSound {
+  constructor() {
+    this.ctx = null;
+  }
 
-  if (!menuToggle || !mobileMenu) return;
-
-  function toggleMenu(show) {
-    const willShow = typeof show === 'boolean' ? show : mobileMenu.classList.contains('hidden');
-    if (willShow) {
-      mobileMenu.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-      menuToggle.setAttribute('aria-expanded', 'true');
-    } else {
-      mobileMenu.classList.add('hidden');
-      document.body.style.overflow = '';
-      menuToggle.setAttribute('aria-expanded', 'false');
+  init() {
+    if (!this.ctx && (window.AudioContext || window.webkitAudioContext)) {
+      this.ctx = new (window.AudioContext || window.webkitAudioContext)();
     }
   }
 
-  menuToggle.addEventListener('click', () => toggleMenu());
+  playBeep(freq = 440, type = 'square', duration = 0.08) {
+    try {
+      this.init();
+      if (!this.ctx) return;
+      if (this.ctx.state === 'suspended') this.ctx.resume();
 
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => toggleMenu(false));
-  });
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-      toggleMenu(false);
+      gain.gain.setValueAtTime(0.1, this.ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + duration);
+
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+
+      osc.start();
+      osc.stop(this.ctx.currentTime + duration);
+    } catch (e) {
+      // Audio autoplay policy catch
     }
-  });
+  }
+
+  scoreUp() {
+    this.playBeep(587.33, 'square', 0.06);
+    setTimeout(() => this.playBeep(880, 'square', 0.08), 60);
+  }
+
+  hitBug() {
+    this.playBeep(330, 'square', 0.05);
+    setTimeout(() => this.playBeep(659.25, 'triangle', 0.08), 50);
+  }
+
+  gameOver() {
+    this.playBeep(220, 'sawtooth', 0.15);
+    setTimeout(() => this.playBeep(146.83, 'sawtooth', 0.25), 140);
+  }
 }
 
+const soundEngine = new RetroSound();
+
 /* ==========================================================================
-   3. Active Section Highlighting
+   6. Bug Hunter '95: Retro SDET Arcade Game
    ========================================================================== */
-function initScrollNav() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+function initBugHunterGame() {
+  const canvas = document.getElementById('game-canvas');
+  if (!canvas) return;
 
-  if (!sections.length || !navLinks.length) return;
+  const ctx = canvas.getContext('2d');
+  const scoreDisplay = document.getElementById('game-score');
+  const bugsDisplay = document.getElementById('game-bugs');
+  const resetBtn = document.getElementById('game-reset-btn');
+  const faceIcon = document.getElementById('game-face-icon');
 
-  window.addEventListener('scroll', () => {
-    const scrollY = window.pageYOffset;
+  // Game Dimensions
+  const W = canvas.width;
+  const H = canvas.height;
+  const GRID = 20;
 
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
-      const sectionId = current.getAttribute('id');
+  let player = { x: 8, y: 5 };
+  let bugs = [];
+  let tests = [];
+  let score = 0;
+  let squashed = 0;
+  let stability = 100;
+  let isGameOver = false;
+  let loopTimer = null;
 
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('text-indigo-600', 'dark:text-indigo-400', 'font-semibold');
-            link.classList.remove('text-slate-600', 'dark:text-slate-400');
-          } else {
-            link.classList.remove('text-indigo-600', 'dark:text-indigo-400', 'font-semibold');
-            link.classList.add('text-slate-600', 'dark:text-slate-400');
-          }
-        });
-      }
+  function resetGame() {
+    player = { x: Math.floor(W / GRID / 2), y: Math.floor(H / GRID / 2) };
+    score = 0;
+    squashed = 0;
+    stability = 100;
+    isGameOver = false;
+    bugs = [];
+    tests = [];
+    
+    // Spawn initial entities
+    for (let i = 0; i < 3; i++) spawnBug();
+    spawnTestPass();
+
+    if (faceIcon) faceIcon.textContent = '🙂';
+    updateDisplays();
+    
+    if (loopTimer) clearInterval(loopTimer);
+    loopTimer = setInterval(gameStep, 180);
+    draw();
+  }
+
+  function spawnBug() {
+    const maxX = Math.floor(W / GRID);
+    const maxY = Math.floor(H / GRID);
+    bugs.push({
+      x: Math.floor(Math.random() * maxX),
+      y: Math.floor(Math.random() * maxY),
+      type: Math.random() > 0.3 ? 'bug' : 'blocker'
     });
-  }, { passive: true });
-}
+  }
 
-/* ==========================================================================
-   4. Project Filters
-   ========================================================================== */
-function initProjectFilters() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  function spawnTestPass() {
+    const maxX = Math.floor(W / GRID);
+    const maxY = Math.floor(H / GRID);
+    tests.push({
+      x: Math.floor(Math.random() * maxX),
+      y: Math.floor(Math.random() * maxY)
+    });
+  }
 
-  if (!filterBtns.length || !projectCards.length) return;
+  function updateDisplays() {
+    if (scoreDisplay) scoreDisplay.textContent = String(score).padStart(3, '0');
+    if (bugsDisplay) bugsDisplay.textContent = String(squashed).padStart(2, '0');
+  }
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter');
+  function move(dx, dy) {
+    if (isGameOver) return;
+    const maxX = Math.floor(W / GRID);
+    const maxY = Math.floor(H / GRID);
 
-      // Update button active state
-      filterBtns.forEach(b => {
-        b.classList.remove('bg-indigo-600', 'text-white', 'shadow-md');
-        b.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
-      });
-      btn.classList.add('bg-indigo-600', 'text-white', 'shadow-md');
-      btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+    player.x = (player.x + dx + maxX) % maxX;
+    player.y = (player.y + dy + maxY) % maxY;
 
-      // Filter cards
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category') || '';
-        const categories = category.split(' ');
+    checkCollisions();
+    draw();
+  }
 
-        if (filter === 'all' || categories.includes(filter)) {
-          card.style.display = 'flex';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 50);
+  function checkCollisions() {
+    // Check Bug squash
+    for (let i = bugs.length - 1; i >= 0; i--) {
+      if (bugs[i].x === player.x && bugs[i].y === player.y) {
+        if (bugs[i].type === 'blocker') {
+          score += 25;
+          soundEngine.hitBug();
         } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(12px)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 250);
+          score += 15;
+          soundEngine.scoreUp();
         }
-      });
-    });
-  });
-}
+        squashed += 1;
+        bugs.splice(i, 1);
+        spawnBug();
+        if (Math.random() > 0.5) spawnBug();
+      }
+    }
 
-/* ==========================================================================
-   5. Counter Animation
-   ========================================================================== */
-function initStatsCounter() {
-  const statsSection = document.getElementById('stats');
-  if (!statsSection) return;
+    // Check Test Pass pickup
+    for (let i = tests.length - 1; i >= 0; i--) {
+      if (tests[i].x === player.x && tests[i].y === player.y) {
+        score += 10;
+        soundEngine.scoreUp();
+        tests.splice(i, 1);
+        spawnTestPass();
+      }
+    }
 
-  let animated = false;
-  const counters = document.querySelectorAll('.counter-val');
+    updateDisplays();
+  }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !animated) {
-        animated = true;
-        counters.forEach(counter => {
-          const target = parseInt(counter.getAttribute('data-target'), 10);
-          if (isNaN(target)) return;
-          
-          let start = 0;
-          const duration = 1600;
-          const stepTime = Math.abs(Math.floor(duration / target));
-          
-          const timer = setInterval(() => {
-            start += 1;
-            counter.innerText = start;
-            if (start >= target) {
-              counter.innerText = target;
-              clearInterval(timer);
-            }
-          }, Math.max(stepTime, 20));
-        });
+  function gameStep() {
+    if (isGameOver) return;
+
+    // Slowly move bugs randomly
+    bugs.forEach(b => {
+      if (Math.random() > 0.6) {
+        const dir = Math.floor(Math.random() * 4);
+        const maxX = Math.floor(W / GRID);
+        const maxY = Math.floor(H / GRID);
+        if (dir === 0) b.x = (b.x + 1) % maxX;
+        else if (dir === 1) b.x = (b.x - 1 + maxX) % maxX;
+        else if (dir === 2) b.y = (b.y + 1) % maxY;
+        else if (dir === 3) b.y = (b.y - 1 + maxY) % maxY;
       }
     });
-  }, { threshold: 0.3 });
 
-  observer.observe(statsSection);
-}
+    // Spawn more bugs if low
+    if (bugs.length < 3) spawnBug();
+    if (tests.length < 2) spawnTestPass();
 
-/* ==========================================================================
-   6. Back to Top Button
-   ========================================================================== */
-function initBackToTop() {
-  const backToTopBtn = document.getElementById('back-to-top');
-  if (!backToTopBtn) return;
+    checkCollisions();
+    draw();
+  }
 
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 400) {
-      backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
-      backToTopBtn.classList.add('opacity-100');
-    } else {
-      backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
-      backToTopBtn.classList.remove('opacity-100');
+  function draw() {
+    // Clear Canvas
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, W, H);
+
+    // Grid lines (retro CRT matrix)
+    ctx.strokeStyle = '#112211';
+    ctx.lineWidth = 0.5;
+    for (let x = 0; x < W; x += GRID) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, H);
+      ctx.stroke();
     }
-  }, { passive: true });
+    for (let y = 0; y < H; y += GRID) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(W, y);
+      ctx.stroke();
+    }
 
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Draw Test Passes (Green diamond)
+    tests.forEach(t => {
+      ctx.fillStyle = '#00ff66';
+      ctx.beginPath();
+      ctx.arc(t.x * GRID + GRID / 2, t.y * GRID + GRID / 2, 5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '9px monospace';
+      ctx.fillText('✓', t.x * GRID + 5, t.y * GRID + 13);
+    });
+
+    // Draw Bugs (Red & Yellow)
+    bugs.forEach(b => {
+      ctx.font = '14px sans-serif';
+      ctx.fillText(b.type === 'blocker' ? '🔥' : '🐛', b.x * GRID + 2, b.y * GRID + 15);
+    });
+
+    // Draw Player (SDET Tester cursor / icon)
+    ctx.fillStyle = '#ffff00';
+    ctx.fillRect(player.x * GRID + 2, player.y * GRID + 2, GRID - 4, GRID - 4);
+    ctx.fillStyle = '#000080';
+    ctx.font = 'bold 11px monospace';
+    ctx.fillText('QA', player.x * GRID + 3, player.y * GRID + 13);
+  }
+
+  // Keyboard controls
+  window.addEventListener('keydown', (e) => {
+    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyW', 'KeyS', 'KeyA', 'KeyD'].includes(e.code)) {
+      e.preventDefault();
+      soundEngine.init();
+      if (e.code === 'ArrowUp' || e.code === 'KeyW') move(0, -1);
+      else if (e.code === 'ArrowDown' || e.code === 'KeyS') move(0, 1);
+      else if (e.code === 'ArrowLeft' || e.code === 'KeyA') move(-1, 0);
+      else if (e.code === 'ArrowRight' || e.code === 'KeyD') move(1, 0);
+    }
   });
+
+  // Mobile / On-screen D-Pad buttons
+  document.getElementById('btn-up')?.addEventListener('click', () => { soundEngine.init(); move(0, -1); });
+  document.getElementById('btn-down')?.addEventListener('click', () => { soundEngine.init(); move(0, 1); });
+  document.getElementById('btn-left')?.addEventListener('click', () => { soundEngine.init(); move(-1, 0); });
+  document.getElementById('btn-right')?.addEventListener('click', () => { soundEngine.init(); move(1, 0); });
+
+  if (resetBtn) resetBtn.addEventListener('click', resetGame);
+
+  resetGame();
 }
 
 /* ==========================================================================
    7. Copy to Clipboard Utility
    ========================================================================== */
 function initCopyButtons() {
-  const copyBtns = document.querySelectorAll('.copy-btn');
-  copyBtns.forEach(btn => {
+  document.querySelectorAll('.copy-btn').forEach(btn => {
     btn.addEventListener('click', async () => {
-      const textToCopy = btn.getAttribute('data-copy');
-      if (!textToCopy) return;
-
+      const text = btn.getAttribute('data-copy');
+      if (!text) return;
       try {
-        await navigator.clipboard.writeText(textToCopy);
-        const originalContent = btn.innerHTML;
-        btn.innerHTML = `<span class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">✓ Copied!</span>`;
-        setTimeout(() => {
-          btn.innerHTML = originalContent;
-        }, 2200);
+        await navigator.clipboard.writeText(text);
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<span>✓ Copied!</span>';
+        setTimeout(() => { btn.innerHTML = orig; }, 2000);
       } catch (err) {
         console.error('Failed to copy', err);
       }
@@ -266,7 +399,7 @@ function initCopyButtons() {
 }
 
 /* ==========================================================================
-   8. Contact Form Simulation / Mailto
+   8. Contact Form Mailto Handler
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -274,27 +407,12 @@ function initContactForm() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = document.getElementById('name')?.value || '';
-    const email = document.getElementById('email')?.value || '';
-    const subject = document.getElementById('subject')?.value || 'Inquiry via Portfolio';
-    const message = document.getElementById('message')?.value || '';
+    const name = document.getElementById('c-name')?.value || '';
+    const email = document.getElementById('c-email')?.value || '';
+    const subject = document.getElementById('c-subject')?.value || 'SDET / Quality Engineering Inquiry';
+    const message = document.getElementById('c-message')?.value || '';
 
-    // Direct mailto link fallback
-    const mailtoUrl = `mailto:muthukumar.pattan+fwinc@freshworks.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\nMessage:\n${message}`)}`;
-    
-    // Show confirmation status
-    const submitBtn = form.querySelector('button[type="submit"]');
-    if (submitBtn) {
-      const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = `<span class="flex items-center gap-2">✓ Opening Mail Client...</span>`;
-      submitBtn.disabled = true;
-
-      setTimeout(() => {
-        window.location.href = mailtoUrl;
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-        form.reset();
-      }, 600);
-    }
+    const mailto = `mailto:muthukumar.pattan+fwinc@freshworks.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+    window.location.href = mailto;
   });
 }

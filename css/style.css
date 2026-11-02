@@ -1,211 +1,415 @@
-/* Custom styles & animations for Muthukumar Pattan's Portfolio */
+/* ==========================================================================
+   Classic 90s Web & Desktop Style (Windows 95 / Retro Professional Workstation)
+   Curated for Muthukumar Pattan - Lead SDET at Freshworks
+   ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap');
 
 :root {
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --win-gray: #c0c0c0;
+  --win-dark-gray: #808080;
+  --win-light: #ffffff;
+  --win-black: #000000;
+  --win-navy: #000080;
+  --win-blue-light: #1084d0;
+  --win-teal-desktop: #008080;
+  --linkedin-blue: #0A66C2;
 }
 
-html {
-  scroll-behavior: smooth;
-  font-family: var(--font-sans);
+body {
+  background-color: var(--win-teal-desktop);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 16px 16px;
+  color: var(--win-black);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 52px; /* space for 90s taskbar */
+  min-height: 100vh;
 }
 
-/* Glassmorphism utility */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+/* ==========================================================================
+   Classic 90s Bevel Utilities
+   ========================================================================== */
+.win-raised {
+  background-color: var(--win-gray);
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-dark-gray);
+  border-bottom: 2px solid var(--win-dark-gray);
+  box-shadow: 1px 1px 0px var(--win-black);
 }
 
-.dark .glass {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.win-raised-heavy {
+  background-color: var(--win-gray);
+  border-top: 3px solid var(--win-light);
+  border-left: 3px solid var(--win-light);
+  border-right: 3px solid var(--win-dark-gray);
+  border-bottom: 3px solid var(--win-dark-gray);
+  box-shadow: 2px 2px 0px var(--win-black);
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+.win-sunken {
+  background-color: var(--win-light);
+  border-top: 2px solid var(--win-dark-gray);
+  border-left: 2px solid var(--win-dark-gray);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  box-shadow: inset 1px 1px 0px var(--win-black);
 }
 
-.dark .glass-card {
-  background: rgba(30, 41, 59, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+.win-sunken-gray {
+  background-color: #dcd8d8;
+  border-top: 2px solid var(--win-dark-gray);
+  border-left: 2px solid var(--win-dark-gray);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
 }
 
-.glass-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: 0 20px 35px -10px rgba(99, 102, 241, 0.15);
+/* Classic 90s Titlebar */
+.win-titlebar {
+  background: linear-gradient(90deg, var(--win-navy) 0%, var(--win-blue-light) 100%);
+  color: #ffffff;
+  padding: 4px 6px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
 }
 
-.dark .glass-card:hover {
-  border-color: rgba(129, 140, 248, 0.35);
-  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.4);
+.win-titlebar-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-/* Gradient mesh background */
-.mesh-gradient-light {
-  background-color: #f8fafc;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.12) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(168, 85, 247, 0.08) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(56, 189, 248, 0.1) 0px, transparent 50%);
-}
-
-.mesh-gradient-dark {
-  background-color: #0b0f19;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.18) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
-    radial-gradient(at 50% 50%, rgba(139, 92, 246, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(56, 189, 248, 0.12) 0px, transparent 50%);
-}
-
-/* Glowing text */
-.text-gradient {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #06b6d4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.dark .text-gradient {
-  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #38bdf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Tech badge */
-.tech-badge {
+.win-titlebar-btn {
+  width: 18px;
+  height: 16px;
+  background-color: var(--win-gray);
+  border-top: 1.5px solid var(--win-light);
+  border-left: 1.5px solid var(--win-light);
+  border-right: 1.5px solid var(--win-dark-gray);
+  border-bottom: 1.5px solid var(--win-dark-gray);
+  box-shadow: 1px 1px 0px var(--win-black);
   display: inline-flex;
   align-items: center;
-  gap: 0.375rem;
-  padding: 0.25rem 0.65rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  border-radius: 9999px;
-  background: rgba(241, 245, 249, 0.8);
-  color: #334155;
-  border: 1px solid rgba(203, 213, 225, 0.8);
-  transition: all 0.2s ease;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  cursor: pointer;
+  padding: 0;
 }
 
-.dark .tech-badge {
-  background: rgba(30, 41, 59, 0.8);
-  color: #cbd5e1;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.win-titlebar-btn:active {
+  border-top: 1.5px solid var(--win-dark-gray);
+  border-left: 1.5px solid var(--win-dark-gray);
+  border-right: 1.5px solid var(--win-light);
+  border-bottom: 1.5px solid var(--win-light);
+  box-shadow: none;
 }
 
-.tech-badge:hover {
-  background: rgba(99, 102, 241, 0.15);
-  color: #4f46e5;
-  border-color: rgba(99, 102, 241, 0.4);
+/* Classic 90s Buttons */
+.win-btn {
+  background-color: var(--win-gray);
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-dark-gray);
+  border-bottom: 2px solid var(--win-dark-gray);
+  box-shadow: 1px 1px 0px var(--win-black);
+  color: var(--win-black);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 5px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  user-select: none;
+  transition: none;
 }
 
-.dark .tech-badge:hover {
-  background: rgba(99, 102, 241, 0.25);
-  color: #a5b4fc;
-  border-color: rgba(129, 140, 248, 0.4);
+.win-btn:active, .win-btn.active {
+  border-top: 2px solid var(--win-dark-gray);
+  border-left: 2px solid var(--win-dark-gray);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  box-shadow: inset 1px 1px 0px var(--win-black);
+  transform: translate(1px, 1px);
 }
 
-/* Timeline connector */
-.timeline-dot {
+/* Explicit LinkedIn Button - 90s Bevel with LinkedIn Brand Color */
+.win-btn-linkedin {
+  background-color: var(--linkedin-blue) !important;
+  color: #ffffff !important;
+  border-top: 2px solid #5aa7ec !important;
+  border-left: 2px solid #5aa7ec !important;
+  border-right: 2px solid #00366c !important;
+  border-bottom: 2px solid #00366c !important;
+  box-shadow: 1px 1px 0px #000000 !important;
+  font-weight: 700 !important;
+}
+
+.win-btn-linkedin:hover {
+  background-color: #0b73dc !important;
+}
+
+.win-btn-linkedin:active {
+  border-top: 2px solid #00366c !important;
+  border-left: 2px solid #00366c !important;
+  border-right: 2px solid #5aa7ec !important;
+  border-bottom: 2px solid #5aa7ec !important;
+  box-shadow: inset 1px 1px 0px #000000 !important;
+}
+
+/* Topmate Button */
+.win-btn-topmate {
+  background-color: #e11d48 !important;
+  color: #ffffff !important;
+  border-top: 2px solid #fb7185 !important;
+  border-left: 2px solid #fb7185 !important;
+  border-right: 2px solid #881337 !important;
+  border-bottom: 2px solid #881337 !important;
+  box-shadow: 1px 1px 0px #000000 !important;
+  font-weight: 700 !important;
+}
+
+.win-btn-topmate:active {
+  border-top: 2px solid #881337 !important;
+  border-left: 2px solid #881337 !important;
+  border-right: 2px solid #fb7185 !important;
+  border-bottom: 2px solid #fb7185 !important;
+}
+
+/* Classic 90s Tabs */
+.win-tab {
+  background-color: #dcd8d8;
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-dark-gray);
+  border-bottom: none;
+  padding: 5px 14px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 2px;
+  position: relative;
+  top: 2px;
+  color: #333333;
+}
+
+.win-tab.active {
+  background-color: var(--win-gray);
+  border-bottom: 2px solid var(--win-gray);
+  top: 0px;
+  padding-bottom: 7px;
+  color: #000000;
+  font-weight: 700;
+  z-index: 2;
+}
+
+/* Classic 90s Menu Bar */
+.win-menubar {
+  background-color: var(--win-gray);
+  border-bottom: 1px solid var(--win-dark-gray);
+  padding: 2px 6px;
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.win-menubar-item {
+  color: #000000;
+  text-decoration: none;
+  padding: 1px 4px;
+  cursor: pointer;
+}
+
+.win-menubar-item:hover {
+  background-color: var(--win-navy);
+  color: #ffffff;
+}
+
+/* Bottom Taskbar */
+.win-taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 38px;
+  background-color: var(--win-gray);
+  border-top: 2px solid var(--win-light);
+  box-shadow: 0 -1px 0 var(--win-dark-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 6px;
+  z-index: 1000;
+}
+
+.win-start-btn {
+  font-weight: 800;
+  font-size: 13px;
+  padding: 3px 10px;
+  background-color: var(--win-gray);
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-dark-gray);
+  border-bottom: 2px solid var(--win-dark-gray);
+  box-shadow: 1px 1px 0px var(--win-black);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.win-start-btn:active, .win-start-btn.open {
+  border-top: 2px solid var(--win-dark-gray);
+  border-left: 2px solid var(--win-dark-gray);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  box-shadow: inset 1px 1px 0px var(--win-black);
+}
+
+.win-tray {
+  border-top: 2px solid var(--win-dark-gray);
+  border-left: 2px solid var(--win-dark-gray);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  padding: 2px 8px;
+  font-size: 12px;
+  font-family: 'Share Tech Mono', monospace;
+  background-color: var(--win-gray);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 90s Start Menu Popup */
+.win-start-menu {
+  position: fixed;
+  bottom: 40px;
+  left: 4px;
+  width: 270px;
+  background-color: var(--win-gray);
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-dark-gray);
+  border-bottom: 2px solid var(--win-dark-gray);
+  box-shadow: 2px 2px 0px var(--win-black);
+  z-index: 1001;
+  display: flex;
+}
+
+.win-start-banner {
+  background: linear-gradient(180deg, var(--win-navy) 0%, #000040 100%);
+  color: #ffffff;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  padding: 10px 6px;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.win-start-items {
+  flex: 1;
+  padding: 4px 0;
+}
+
+.win-start-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.win-start-item:hover {
+  background-color: var(--win-navy);
+  color: #ffffff;
+}
+
+/* 90s Retro Game Canvas */
+#game-canvas {
+  background-color: #000000;
+  border-top: 2px solid var(--win-dark-gray);
+  border-left: 2px solid var(--win-dark-gray);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  display: block;
+  image-rendering: pixelated;
+}
+
+/* Digital LCD displays for Game & Counter */
+.win-lcd {
+  background-color: #000000;
+  color: #ff2222;
+  font-family: 'VT323', monospace;
+  font-size: 24px;
+  padding: 2px 8px;
+  border-top: 2px solid var(--win-dark-gray);
+  border-left: 2px solid var(--win-dark-gray);
+  border-right: 2px solid var(--win-light);
+  border-bottom: 2px solid var(--win-light);
+  letter-spacing: 2px;
+  text-shadow: 0 0 4px #ff0000;
+}
+
+/* 90s Web Badges */
+.retro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-top: 1px solid var(--win-dark-gray);
+  border-left: 1px solid var(--win-dark-gray);
+  border-right: 1px solid var(--win-light);
+  border-bottom: 1px solid var(--win-light);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  padding: 2px 6px;
+  background-color: #e2e8f0;
+  font-weight: 600;
+}
+
+/* Under construction / retro marquee */
+.win-marquee {
+  background-color: #ffffc0;
+  color: #000000;
+  border: 1px solid #808080;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-family: 'Share Tech Mono', monospace;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Fieldset styling 90s */
+.win-fieldset {
+  border-top: 2px solid var(--win-light);
+  border-left: 2px solid var(--win-light);
+  border-right: 2px solid var(--win-dark-gray);
+  border-bottom: 2px solid var(--win-dark-gray);
+  padding: 10px 14px;
+  margin-bottom: 12px;
   position: relative;
 }
 
-.timeline-dot::after {
-  content: '';
-  position: absolute;
-  inset: -4px;
-  border-radius: 9999px;
-  background: rgba(99, 102, 241, 0.25);
-  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes pulse-ring {
-  0% { transform: scale(0.95); opacity: 0.8; }
-  50% { transform: scale(1.4); opacity: 0; }
-  100% { transform: scale(0.95); opacity: 0; }
-}
-
-/* Pulse beacon for available status */
-.beacon-dot {
-  position: relative;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #10b981;
-}
-
-.beacon-dot::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #10b981;
-  opacity: 0.75;
-  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: #334155;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
-}
-
-/* Print Styles for Resume view */
-@media print {
-  nav, footer, #contact, .no-print, button {
-    display: none !important;
-  }
-  body {
-    background: white !important;
-    color: black !important;
-  }
-  .glass-card {
-    border: 1px solid #ccc !important;
-    box-shadow: none !important;
-  }
+.win-legend {
+  font-weight: 700;
+  font-size: 12px;
+  padding: 0 6px;
+  color: #000080;
 }
