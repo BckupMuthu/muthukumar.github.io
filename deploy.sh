@@ -3,7 +3,7 @@
 # Quick deployment helper script for Muthukumar Pattan's GitHub Pages Site
 set -e
 
-REPO_URL="https://github.com/BckupMuthu/BckupMuthu.github.io.git"
+REPO_URL="https://github.com/BckupMuthu/muthukumar.github.io.git"
 
 echo "=========================================================="
 echo "  Deploying Muthukumar Pattan's Portfolio to GitHub Pages  "

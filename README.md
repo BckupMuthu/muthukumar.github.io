@@ -58,7 +58,7 @@ git commit -m "feat: initial release of Muthukumar Pattan portfolio"
 git branch -M main
 
 # Link to your new GitHub repository
-git remote add origin https://github.com/BckupMuthu/BckupMuthu.github.io.git
+git remote add origin https://github.com/BckupMuthu/muthukumar.github.io.git
 
 # Push to GitHub
 git push -u origin main
