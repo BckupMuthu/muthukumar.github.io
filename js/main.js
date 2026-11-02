@@ -412,7 +412,7 @@ function initContactForm() {
     const subject = document.getElementById('c-subject')?.value || 'SDET / Quality Engineering Inquiry';
     const message = document.getElementById('c-message')?.value || '';
 
-    const mailto = `mailto:muthukumar.pattan+fwinc@freshworks.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+    const mailto = `mailto:muthukumar.pattan@freshworks.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
     window.location.href = mailto;
   });
 }

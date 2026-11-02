@@ -90,7 +90,9 @@ Then visit **`http://localhost:8000`** in your browser.
 
 ## 📬 Contact & Connect
 
-- **LinkedIn**: [linkedin.com/in/muthukumar-pattan-a0b8079a](https://www.linkedin.com/in/muthukumar-pattan-a0b8079a/)
+- **LinkedIn**: [linkedin.com/in/muthukumar-pattan](https://www.linkedin.com/in/muthukumar-pattan)
 - **Topmate**: [topmate.io/muthukumar_pattan](https://topmate.io/muthukumar_pattan)
 - **GitHub**: [github.com/BckupMuthu](https://github.com/BckupMuthu)
-- **Work Email**: `muthukumar.pattan+fwinc@freshworks.com`
+- **Work Email**: `muthukumar.pattan@freshworks.com`
+- **Personal Email**: `mpmuthu59@gmail.com`
+- **Phone**: `+91-8124286104`
